@@ -220,18 +220,18 @@
                             </div>
                         </div>
                         <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                            <div class="row justify-content-center learn__cards pl-100 pr-100">
-                                <div class="col-lg-4 col-md-4 learn__card mb-md-40">
+                            <div class="row justify-content-center learn__cards pl-100 pr-100 pl-md-0 pr-md-0">
+                                <div class="col-lg-4 col-md-4 learn__card mb-md-20">
                                      <h4 class="">Дождитесь решения</h4>
 
                                     <div class="learn__text text-grey">Наши специалисты примут решение&nbsp;о&nbsp;выдаче займа в течение 15&nbsp;минут</div>
                                 </div>
-                                <div class="col-lg-4 col-md-4 learn__card mb-md-40">
+                                <div class="col-lg-4 col-md-4 learn__card mb-md-20">
                                      <h4 class="">Получите деньги</h4>
 
                                     <div class="learn__text text-grey">Подтвердите договор с помощью SMS&nbsp;кода, и сразу же получите деньги&nbsp;на&nbsp;карту.</div>
                                 </div>
-                                <div class="col-lg-4 col-md-4 learn__card mb-md-40">
+                                <div class="col-lg-4 col-md-4 learn__card mb-md-20">
                                      <h4 class="">Заполните заявку</h4>
 
                                     <div class="learn__text text-grey">Укажите нужную вам сумму и срок с&nbsp;помощью кредитного калькулятора.
@@ -251,270 +251,44 @@
                             <div class="text-grey text-500 mb-40">Онлайн-займы — это микрокредиты на сумму от 1000 до 30 000 сроком от 1
                                 до 16 дней c процентной ставкой от 0% до 1% в день. Заёмщик получает деньги
                                 на свою карту сразу после одобрения заявки, поданной онлайн на сайте.</div>
-                            <button
-                            class="btn btn-rounded btn-transparent" onclick="openModal('conditions-modal')">Условия займа</button>
+                            <div
+                            class="d-flex justify-content-center">
+                                <button class="btn btn-rounded btn-transparent" onclick="openModal('conditions-modal')">Условия займа</button>
                         </div>
                     </div>
-                    <div class="main-info-desktop">
-                        <div class="info-tabs custom-column-big">
-                            <ul class="nav nav-tabs about-nav mb-20" id="about-tab" role="tablist">
-                                <li class="nav-item mr-30 mr-md-0" role="presentation">
-                                    <button class="nav-link active" id="faq-tab" data-bs-toggle="tab" data-bs-target="#faq"
-                                    type="button" role="tab" aria-controls="faq" aria-selected="true">Вопросы и ответы</button>
-                                </li>
-                                <li class="nav-item mr-30 mr-md-0" role="presentation">
-                                    <button class="nav-link" id="other-info-tab" data-bs-toggle="tab" data-bs-target="#other-info"
-                                    type="button" role="tab" aria-controls="other-info" aria-selected="false">Другая информация</button>
-                                </li>
-                                <li class="nav-item mr-30 mr-md-0" role="presentation">
-                                    <button class="nav-link" id="docs-tab" data-bs-toggle="tab" data-bs-target="#docs"
-                                    type="button" role="tab" aria-controls="docs" aria-selected="false">Документы</button>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="requisites-tab" data-bs-toggle="tab" data-bs-target="#requisites"
-                                    type="button" role="tab" aria-controls="requisites" aria-selected="false">Реквизиты</button>
-                                </li>
-                            </ul>
-                            <div class="tab-content pt-48" id="about-tabs">
-                                <div class="tab-pane fade show active" id="faq" role="tabpanel" aria-labelledby="faq-tab">
-                                    <div class="faq">
-                                        <div class="faq__item info-tabs__item">
-                                            <div class="faq__question d-flex justify-content-between">
-                                                <div class="question"> <span class="item-number">01</span>
-Кто может взять микрозайм?</div>
-                                                <div>
-                                                    <svg class="burger-toggler" width="24" height="24" viewBox="0 0 24 24"
-                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M2 22L22 2M22 2V22M22 2H2" stroke="#151515" stroke-width="2"
-                                                        />
-                                                    </svg>
-                                                </div>
-                                            </div>
-                                            <div class="faq__answer text-grey text-500">
-                                                <div class="mt-10">Текст о том, как взять микрозайм в МФО.</div>
-                                            </div>
-                                        </div>
-                                        <div class="faq__item info-tabs__item">
-                                            <div class="faq__question d-flex justify-content-between">
-                                                <div class="question"> <span class="item-number">02</span>
-Как повысить вероятность одобрения?</div>
-                                                <div>
-                                                    <svg class="burger-toggler" width="24" height="24" viewBox="0 0 24 24"
-                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M2 22L22 2M22 2V22M22 2H2" stroke="#151515" stroke-width="2"
-                                                        />
-                                                    </svg>
-                                                </div>
-                                            </div>
-                                            <div class="faq__answer text-grey text-500">
-                                                <div class="mt-10">Текст о том, как повысить вероятность одобрения во время взятия займа
-                                                    в МФО.</div>
-                                            </div>
-                                        </div>
-                                        <div class="faq__item info-tabs__item">
-                                            <div class="faq__question d-flex justify-content-between">
-                                                <div class="question"> <span class="item-number">03</span>
-Как избежать просрочки?</div>
-                                                <div>
-                                                    <svg class="burger-toggler" width="24" height="24" viewBox="0 0 24 24"
-                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M2 22L22 2M22 2V22M22 2H2" stroke="#151515" stroke-width="2"
-                                                        />
-                                                    </svg>
-                                                </div>
-                                            </div>
-                                            <div class="faq__answer text-grey text-500">
-                                                <div class="mt-10">Текст о том, как избежать отсрочки во время взятия займа в МФО.</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade" id="other-info" role="tabpanel" aria-labelledby="other-info-tab">
-                                    <div class="info-tabs__item"> <span class="item-number">01</span>
- <a href="#">
-                        Ссылки на официальный сайт Банка России в информационно-телекоммуникационной сети "Интернет" (далее - сайт Банка России) и на страницу сайта Банка России...
-                    </a>
-
-                                    </div>
-                                    <div class="info-tabs__item"> <span class="item-number">02</span>
- <a href="#">
-                        Ссылка на страницу интернет-приемной Банка России на сайте Банка России.
-                    </a>
-
-                                    </div>
-                                    <div class="info-tabs__item"> <span class="item-number">03</span>
- <a href="#">
-                        Информация о праве потребителей финансовых услуг направить обращение финансовому уполномоченному
-                    </a>
-
-                                    </div>
-                                    <div class="info-tabs__item"> <span class="item-number">04</span>
- <a href="#">
-                        Информация о наличии предписания Банка России, полностью или частично ограничивающего осуществление микрофинансовой организацией привлечения денежных средств, выдачи займов, проведение иных операций
-                    </a>
-
-                                    </div>
-                                    <div class="info-tabs__item"> <span class="item-number">05</span>
- <a href="#">
-                        Информация о кредитном рейтинге
-                    </a>
-
-                                    </div>
-                                    <div class="info-tabs__item"> <span class="item-number">06</span>
- <a href="#">
-                        Персональный состав органов управления микрофинансовой организации
-                    </a>
-
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade" id="docs" role="tabpanel" aria-labelledby="docs-tab">
-                                    <div class="info-tabs__item"> <span class="item-number">01</span>
- <a href="#">Общие условия
-                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path id="Vector 1" d="M13 0V24M13 24L1 12M13 24L25 12" stroke="#151515" stroke-width="2"/>
-                        </svg>
-                    </a>
-
-                                    </div>
-                                    <div class="info-tabs__item"> <span class="item-number">02</span>
- <a href="#">Правила предоставления микрозайма
-                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path id="Vector 1" d="M13 0V24M13 24L1 12M13 24L25 12" stroke="#151515" stroke-width="2"/>
-                        </svg>
-                    </a>
-
-                                    </div>
-                                    <div class="info-tabs__item"> <span class="item-number">03</span>
- <a href="#">Правила №195 комбинированного страхования
-                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path id="Vector 1" d="M13 0V24M13 24L1 12M13 24L25 12" stroke="#151515" stroke-width="2"/>
-                        </svg>
-                    </a>
-
-                                    </div>
-                                    <div class="info-tabs__item"> <span class="item-number">04</span>
- <a href="#">Свидетельство о постановке на учет
-                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path id="Vector 1" d="M13 0V24M13 24L1 12M13 24L25 12" stroke="#151515" stroke-width="2"/>
-                        </svg>
-                    </a>
-
-                                    </div>
-                                    <div class="info-tabs__item"> <span class="item-number">05</span>
- <a href="#">Политика обработки и защиты персональных данных
-                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path id="Vector 1" d="M13 0V24M13 24L1 12M13 24L25 12" stroke="#151515" stroke-width="2"/>
-                        </svg>
-                    </a>
-
-                                    </div>
-                                    <div class="info-tabs__item"> <span class="item-number">06</span>
- <a href="#">Базовый стандарт МФО
-                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path id="Vector 1" d="M13 0V24M13 24L1 12M13 24L25 12" stroke="#151515" stroke-width="2"/>
-                        </svg>
-                    </a>
-
-                                    </div>
-                                    <div class="info-tabs__item"> <span class="item-number">07</span>
- <a href="#">Информация об условиях предоставления, использования и возврата микрозайма
-                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path id="Vector 1" d="M13 0V24M13 24L1 12M13 24L25 12" stroke="#151515" stroke-width="2"/>
-                        </svg>
-                    </a>
-
-                                    </div>
-                                    <div class="info-tabs__item"> <span class="item-number">08</span>
- <a href="#">Согласие СОПД
-                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path id="Vector 1" d="M13 0V24M13 24L1 12M13 24L25 12" stroke="#151515" stroke-width="2"/>
-                        </svg>
-                    </a>
-
-                                    </div>
-                                    <div class="info-tabs__item"> <span class="item-number">09</span>
- <a href="#">Свидетельство о внесении в реестр МФО
-                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path id="Vector 1" d="M13 0V24M13 24L1 12M13 24L25 12" stroke="#151515" stroke-width="2"/>
-                        </svg>
-                    </a>
-
-                                    </div>
-                                    <div class="show-all text-grey underlined text-center mt-20">Показать весь список</div>
-                                </div>
-                                <div class="tab-pane fade" id="requisites" role="tabpanel" aria-labelledby="requisites-tab">
-                                    <div class="requisites__item">
-                                        <div class="requisite-name">Полное наименование:</div>
-                                        <div>Общество с ограниченной ответственностью Микрокредитная Компания "x"</div>
-                                    </div>
-                                    <div class="requisites__item">
-                                        <div class="requisite-name">Сокращённое наименование:</div>
-                                        <div>ООО МКК "x"</div>
-                                    </div>
-                                    <div class="requisites__item">
-                                        <div class="requisite-name">ИНН:</div>
-                                        <div>1111111111</div>
-                                    </div>
-                                    <div class="requisites__item">
-                                        <div class="requisite-name">КПП:</div>
-                                        <div>111111111</div>
-                                    </div>
-                                    <div class="requisites__item">
-                                        <div class="requisite-name">ОГРН:</div>
-                                        <div>1111111111111</div>
-                                    </div>
-                                    <div class="requisites__item">
-                                        <div class="requisite-name">ОКПО:</div>
-                                        <div>11111111</div>
-                                    </div>
-                                    <div class="requisites__item">
-                                        <div class="requisite-name">Расчетный счет:</div>
-                                        <div>10101110111110000011</div>
-                                    </div>
-                                    <div class="requisites__item">
-                                        <div class="requisite-name">Банк:</div>
-                                        <div>ФИЛИАЛ "САНКТ-ПЕТЕРБУРГСКИЙ" АО "АЛЬФА-БАНК"</div>
-                                    </div>
-                                    <div class="requisites__item">
-                                        <div class="requisite-name">БИК:</div>
-                                        <div>011010111</div>
-                                    </div>
-                                    <div class="requisites__item">
-                                        <div class="requisite-name">Корр. счет:</div>
-                                        <div>10101110100000000111</div>
-                                    </div>
-                                    <div class="requisites__item">
-                                        <div class="requisite-name">Юридический адрес:</div>
-                                        <div>информация о юридическом адресе</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="main-info-mobile">
-                        <div class="main-info-mobile__card">
-                            <div class="main-info-mobile__title"> <span>Вопросы и ответы</span>
-
-                                <svg width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <g id="Arrow">
-                                        <path id="Vector" d="M19 9L12 16L5 9" stroke="#A3A3A3" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                    </g>
-                                </svg>
-                            </div>
-                            <div class="main-info-mobile__body">
+                </div>
+                <div class="main-info-desktop">
+                    <div class="info-tabs custom-column-big">
+                        <ul class="nav nav-tabs about-nav mb-20" id="about-tab" role="tablist">
+                            <li class="nav-item mr-30 mr-md-0" role="presentation">
+                                <button class="nav-link active" id="faq-tab" data-bs-toggle="tab" data-bs-target="#faq"
+                                type="button" role="tab" aria-controls="faq" aria-selected="true">Вопросы и ответы</button>
+                            </li>
+                            <li class="nav-item mr-30 mr-md-0" role="presentation">
+                                <button class="nav-link" id="other-info-tab" data-bs-toggle="tab" data-bs-target="#other-info"
+                                type="button" role="tab" aria-controls="other-info" aria-selected="false">Другая информация</button>
+                            </li>
+                            <li class="nav-item mr-30 mr-md-0" role="presentation">
+                                <button class="nav-link" id="docs-tab" data-bs-toggle="tab" data-bs-target="#docs"
+                                type="button" role="tab" aria-controls="docs" aria-selected="false">Документы</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="requisites-tab" data-bs-toggle="tab" data-bs-target="#requisites"
+                                type="button" role="tab" aria-controls="requisites" aria-selected="false">Реквизиты</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content pt-48" id="about-tabs">
+                            <div class="tab-pane fade show active" id="faq" role="tabpanel" aria-labelledby="faq-tab">
                                 <div class="faq">
                                     <div class="faq__item info-tabs__item">
                                         <div class="faq__question d-flex justify-content-between">
-                                            <div class="question">Кто может взять микрозайм?</div>
+                                            <div class="question"> <span class="item-number">01</span>
+Кто может взять микрозайм?</div>
                                             <div>
                                                 <svg class="burger-toggler" width="24" height="24" viewBox="0 0 24 24"
                                                 fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <g id="Component 1">
-                                                        <path id="Vector" d="M6 12H12M12 12H18M12 12V18M12 12V6" stroke="#151515"
-                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                                    </g>
+                                                    <path d="M2 22L22 2M22 2V22M22 2H2" stroke="#151515" stroke-width="2"
+                                                    />
                                                 </svg>
                                             </div>
                                         </div>
@@ -524,14 +298,13 @@
                                     </div>
                                     <div class="faq__item info-tabs__item">
                                         <div class="faq__question d-flex justify-content-between">
-                                            <div class="question">Как повысить вероятность одобрения?</div>
+                                            <div class="question"> <span class="item-number">02</span>
+Как повысить вероятность одобрения?</div>
                                             <div>
                                                 <svg class="burger-toggler" width="24" height="24" viewBox="0 0 24 24"
                                                 fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <g id="Component 1">
-                                                        <path id="Vector" d="M6 12H12M12 12H18M12 12V18M12 12V6" stroke="#151515"
-                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                                    </g>
+                                                    <path d="M2 22L22 2M22 2V22M22 2H2" stroke="#151515" stroke-width="2"
+                                                    />
                                                 </svg>
                                             </div>
                                         </div>
@@ -542,14 +315,13 @@
                                     </div>
                                     <div class="faq__item info-tabs__item">
                                         <div class="faq__question d-flex justify-content-between">
-                                            <div class="question">Как избежать просрочки?</div>
+                                            <div class="question"> <span class="item-number">03</span>
+Как избежать просрочки?</div>
                                             <div>
                                                 <svg class="burger-toggler" width="24" height="24" viewBox="0 0 24 24"
                                                 fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <g id="Component 1">
-                                                        <path id="Vector" d="M6 12H12M12 12H18M12 12V18M12 12V6" stroke="#151515"
-                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                                    </g>
+                                                    <path d="M2 22L22 2M22 2V22M22 2H2" stroke="#151515" stroke-width="2"
+                                                    />
                                                 </svg>
                                             </div>
                                         </div>
@@ -559,218 +331,448 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="main-info-mobile__card">
-                            <div class="main-info-mobile__title"> <span>Другая информация</span>
+                            <div class="tab-pane fade" id="other-info" role="tabpanel" aria-labelledby="other-info-tab">
+                                <div class="info-tabs__item"> <span class="item-number">01</span>
+ <a href="#">
+                        Ссылки на официальный сайт Банка России в информационно-телекоммуникационной сети "Интернет" (далее - сайт Банка России) и на страницу сайта Банка России...
+                    </a>
 
-                                <svg width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <g id="Arrow">
-                                        <path id="Vector" d="M19 9L12 16L5 9" stroke="#A3A3A3" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                    </g>
-                                </svg>
+                                </div>
+                                <div class="info-tabs__item"> <span class="item-number">02</span>
+ <a href="#">
+                        Ссылка на страницу интернет-приемной Банка России на сайте Банка России.
+                    </a>
+
+                                </div>
+                                <div class="info-tabs__item"> <span class="item-number">03</span>
+ <a href="#">
+                        Информация о праве потребителей финансовых услуг направить обращение финансовому уполномоченному
+                    </a>
+
+                                </div>
+                                <div class="info-tabs__item"> <span class="item-number">04</span>
+ <a href="#">
+                        Информация о наличии предписания Банка России, полностью или частично ограничивающего осуществление микрофинансовой организацией привлечения денежных средств, выдачи займов, проведение иных операций
+                    </a>
+
+                                </div>
+                                <div class="info-tabs__item"> <span class="item-number">05</span>
+ <a href="#">
+                        Информация о кредитном рейтинге
+                    </a>
+
+                                </div>
+                                <div class="info-tabs__item"> <span class="item-number">06</span>
+ <a href="#">
+                        Персональный состав органов управления микрофинансовой организации
+                    </a>
+
+                                </div>
                             </div>
-                            <div class="main-info-mobile__body">
-                                <div class="info-tabs__item"> <a href="#">
+                            <div class="tab-pane fade" id="docs" role="tabpanel" aria-labelledby="docs-tab">
+                                <div class="info-tabs__item"> <span class="item-number">01</span>
+ <a href="#">Общие условия
+                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path id="Vector 1" d="M13 0V24M13 24L1 12M13 24L25 12" stroke="#151515" stroke-width="2"/>
+                        </svg>
+                    </a>
+
+                                </div>
+                                <div class="info-tabs__item"> <span class="item-number">02</span>
+ <a href="#">Правила предоставления микрозайма
+                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path id="Vector 1" d="M13 0V24M13 24L1 12M13 24L25 12" stroke="#151515" stroke-width="2"/>
+                        </svg>
+                    </a>
+
+                                </div>
+                                <div class="info-tabs__item"> <span class="item-number">03</span>
+ <a href="#">Правила №195 комбинированного страхования
+                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path id="Vector 1" d="M13 0V24M13 24L1 12M13 24L25 12" stroke="#151515" stroke-width="2"/>
+                        </svg>
+                    </a>
+
+                                </div>
+                                <div class="info-tabs__item"> <span class="item-number">04</span>
+ <a href="#">Свидетельство о постановке на учет
+                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path id="Vector 1" d="M13 0V24M13 24L1 12M13 24L25 12" stroke="#151515" stroke-width="2"/>
+                        </svg>
+                    </a>
+
+                                </div>
+                                <div class="info-tabs__item"> <span class="item-number">05</span>
+ <a href="#">Политика обработки и защиты персональных данных
+                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path id="Vector 1" d="M13 0V24M13 24L1 12M13 24L25 12" stroke="#151515" stroke-width="2"/>
+                        </svg>
+                    </a>
+
+                                </div>
+                                <div class="info-tabs__item"> <span class="item-number">06</span>
+ <a href="#">Базовый стандарт МФО
+                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path id="Vector 1" d="M13 0V24M13 24L1 12M13 24L25 12" stroke="#151515" stroke-width="2"/>
+                        </svg>
+                    </a>
+
+                                </div>
+                                <div class="info-tabs__item"> <span class="item-number">07</span>
+ <a href="#">Информация об условиях предоставления, использования и возврата микрозайма
+                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path id="Vector 1" d="M13 0V24M13 24L1 12M13 24L25 12" stroke="#151515" stroke-width="2"/>
+                        </svg>
+                    </a>
+
+                                </div>
+                                <div class="info-tabs__item"> <span class="item-number">08</span>
+ <a href="#">Согласие СОПД
+                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path id="Vector 1" d="M13 0V24M13 24L1 12M13 24L25 12" stroke="#151515" stroke-width="2"/>
+                        </svg>
+                    </a>
+
+                                </div>
+                                <div class="info-tabs__item"> <span class="item-number">09</span>
+ <a href="#">Свидетельство о внесении в реестр МФО
+                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path id="Vector 1" d="M13 0V24M13 24L1 12M13 24L25 12" stroke="#151515" stroke-width="2"/>
+                        </svg>
+                    </a>
+
+                                </div>
+                                <div class="show-all text-grey underlined text-center mt-20">Показать весь список</div>
+                            </div>
+                            <div class="tab-pane fade" id="requisites" role="tabpanel" aria-labelledby="requisites-tab">
+                                <div class="requisites__item">
+                                    <div class="requisite-name">Полное наименование:</div>
+                                    <div>Общество с ограниченной ответственностью Микрокредитная Компания "x"</div>
+                                </div>
+                                <div class="requisites__item">
+                                    <div class="requisite-name">Сокращённое наименование:</div>
+                                    <div>ООО МКК "x"</div>
+                                </div>
+                                <div class="requisites__item">
+                                    <div class="requisite-name">ИНН:</div>
+                                    <div>1111111111</div>
+                                </div>
+                                <div class="requisites__item">
+                                    <div class="requisite-name">КПП:</div>
+                                    <div>111111111</div>
+                                </div>
+                                <div class="requisites__item">
+                                    <div class="requisite-name">ОГРН:</div>
+                                    <div>1111111111111</div>
+                                </div>
+                                <div class="requisites__item">
+                                    <div class="requisite-name">ОКПО:</div>
+                                    <div>11111111</div>
+                                </div>
+                                <div class="requisites__item">
+                                    <div class="requisite-name">Расчетный счет:</div>
+                                    <div>10101110111110000011</div>
+                                </div>
+                                <div class="requisites__item">
+                                    <div class="requisite-name">Банк:</div>
+                                    <div>ФИЛИАЛ "САНКТ-ПЕТЕРБУРГСКИЙ" АО "АЛЬФА-БАНК"</div>
+                                </div>
+                                <div class="requisites__item">
+                                    <div class="requisite-name">БИК:</div>
+                                    <div>011010111</div>
+                                </div>
+                                <div class="requisites__item">
+                                    <div class="requisite-name">Корр. счет:</div>
+                                    <div>10101110100000000111</div>
+                                </div>
+                                <div class="requisites__item">
+                                    <div class="requisite-name">Юридический адрес:</div>
+                                    <div>информация о юридическом адресе</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-info-mobile">
+                    <div class="main-info-mobile__card">
+                        <div class="main-info-mobile__title"> <span>Вопросы и ответы</span>
+
+                            <svg width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="Arrow">
+                                    <path id="Vector" d="M19 9L12 16L5 9" stroke="#A3A3A3" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="main-info-mobile__body">
+                            <div class="faq">
+                                <div class="faq__item info-tabs__item">
+                                    <div class="faq__question d-flex justify-content-between">
+                                        <div class="question">Кто может взять микрозайм?</div>
+                                        <div>
+                                            <svg class="burger-toggler" width="24" height="24" viewBox="0 0 24 24"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g id="Component 1">
+                                                    <path id="Vector" d="M6 12H12M12 12H18M12 12V18M12 12V6" stroke="#151515"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                </g>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="faq__answer text-grey text-500">
+                                        <div class="mt-10">Текст о том, как взять микрозайм в МФО.</div>
+                                    </div>
+                                </div>
+                                <div class="faq__item info-tabs__item">
+                                    <div class="faq__question d-flex justify-content-between">
+                                        <div class="question">Как повысить вероятность одобрения?</div>
+                                        <div>
+                                            <svg class="burger-toggler" width="24" height="24" viewBox="0 0 24 24"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g id="Component 1">
+                                                    <path id="Vector" d="M6 12H12M12 12H18M12 12V18M12 12V6" stroke="#151515"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                </g>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="faq__answer text-grey text-500">
+                                        <div class="mt-10">Текст о том, как повысить вероятность одобрения во время взятия займа
+                                            в МФО.</div>
+                                    </div>
+                                </div>
+                                <div class="faq__item info-tabs__item">
+                                    <div class="faq__question d-flex justify-content-between">
+                                        <div class="question">Как избежать просрочки?</div>
+                                        <div>
+                                            <svg class="burger-toggler" width="24" height="24" viewBox="0 0 24 24"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g id="Component 1">
+                                                    <path id="Vector" d="M6 12H12M12 12H18M12 12V18M12 12V6" stroke="#151515"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                </g>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="faq__answer text-grey text-500">
+                                        <div class="mt-10">Текст о том, как избежать отсрочки во время взятия займа в МФО.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-info-mobile__card">
+                        <div class="main-info-mobile__title"> <span>Другая информация</span>
+
+                            <svg width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="Arrow">
+                                    <path id="Vector" d="M19 9L12 16L5 9" stroke="#A3A3A3" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="main-info-mobile__body">
+                            <div class="info-tabs__item"> <a href="#">
                     Ссылки на официальный сайт Банка России в информационно-телекоммуникационной сети "Интернет" (далее - сайт Банка России) и на страницу сайта Банка России...
                 </a>
 
-                                </div>
-                                <div class="info-tabs__item"> <a href="#">
+                            </div>
+                            <div class="info-tabs__item"> <a href="#">
                     Ссылка на страницу интернет-приемной Банка России на сайте Банка России.
                 </a>
 
-                                </div>
-                                <div class="info-tabs__item"> <a href="#">
+                            </div>
+                            <div class="info-tabs__item"> <a href="#">
                     Информация о праве потребителей финансовых услуг направить обращение финансовому уполномоченному
                 </a>
 
-                                </div>
-                                <div class="info-tabs__item"> <a href="#">
+                            </div>
+                            <div class="info-tabs__item"> <a href="#">
                     Информация о наличии предписания Банка России, полностью или частично ограничивающего осуществление микрофинансовой организацией привлечения денежных средств, выдачи займов, проведение иных операций
                 </a>
 
-                                </div>
-                                <div class="info-tabs__item"> <a href="#">
+                            </div>
+                            <div class="info-tabs__item"> <a href="#">
                     Информация о кредитном рейтинге
                 </a>
 
-                                </div>
-                                <div class="info-tabs__item"> <a href="#">
+                            </div>
+                            <div class="info-tabs__item"> <a href="#">
                     Персональный состав органов управления микрофинансовой организации
                 </a>
 
-                                </div>
-                            </div>
-                        </div>
-                        <div class="main-info-mobile__card">
-                            <div class="main-info-mobile__title"> <span>Документы</span>
-
-                                <svg width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <g id="Arrow">
-                                        <path id="Vector" d="M19 9L12 16L5 9" stroke="#A3A3A3" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                    </g>
-                                </svg>
-                            </div>
-                            <div class="main-info-mobile__body">
-                                <div class="info-tabs__item"> <a href="#">Общие условия
-                <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path id="Vector 1" d="M13 0V24M13 24L1 12M13 24L25 12" stroke="#151515" stroke-width="2"/>
-                    </svg>
-                </a>
-
-                                </div>
-                                <div class="info-tabs__item"> <a href="#">Правила предоставления микрозайма
-                <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path id="Vector 1" d="M13 0V24M13 24L1 12M13 24L25 12" stroke="#151515" stroke-width="2"/>
-                    </svg>
-                </a>
-
-                                </div>
-                                <div class="info-tabs__item"> <a href="#">Правила №195 комбинированного страхования
-                <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path id="Vector 1" d="M13 0V24M13 24L1 12M13 24L25 12" stroke="#151515" stroke-width="2"/>
-                    </svg>
-                </a>
-
-                                </div>
-                                <div class="info-tabs__item"> <a href="#">Свидетельство о постановке на учет
-                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path id="Vector 1" d="M13 0V24M13 24L1 12M13 24L25 12" stroke="#151515" stroke-width="2"/>
-                    </svg>
-                </a>
-
-                                </div>
-                                <div class="info-tabs__item"> <a href="#">Политика обработки и защиты персональных данных
-                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path id="Vector 1" d="M13 0V24M13 24L1 12M13 24L25 12" stroke="#151515" stroke-width="2"/>
-                    </svg>
-                </a>
-
-                                </div>
-                                <div class="info-tabs__item"> <a href="#">Базовый стандарт МФО
-                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path id="Vector 1" d="M13 0V24M13 24L1 12M13 24L25 12" stroke="#151515" stroke-width="2"/>
-                    </svg>
-                </a>
-
-                                </div>
-                                <div class="info-tabs__item"> <a href="#">Информация об условиях предоставления, использования и возврата микрозайма
-                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path id="Vector 1" d="M13 0V24M13 24L1 12M13 24L25 12" stroke="#151515" stroke-width="2"/>
-                    </svg>
-                </a>
-
-                                </div>
-                                <div class="info-tabs__item"> <a href="#">Согласие СОПД
-                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path id="Vector 1" d="M13 0V24M13 24L1 12M13 24L25 12" stroke="#151515" stroke-width="2"/>
-                    </svg>
-                </a>
-
-                                </div>
-                                <div class="info-tabs__item"> <a href="#">Свидетельство о внесении в реестр МФО
-                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path id="Vector 1" d="M13 0V24M13 24L1 12M13 24L25 12" stroke="#151515" stroke-width="2"/>
-                    </svg>
-                </a>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="main-info-mobile__card">
-                            <div class="main-info-mobile__title"> <span>Реквизиты</span>
-
-                                <svg width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <g id="Arrow">
-                                        <path id="Vector" d="M19 9L12 16L5 9" stroke="#A3A3A3" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                    </g>
-                                </svg>
-                            </div>
-                            <div class="main-info-mobile__body">
-                                <div class="info-tabs__item requisites__mob-item">
-                                    <div class="requisite-name">Полное наименование:</div>
-                                    <div class="requisite-data">Общество с ограниченной ответственностью Микрокредитная Компания "x"</div>
-                                </div>
-                                <div class="info-tabs__item requisites__mob-item">
-                                    <div class="requisite-name">Сокращённое наименование:</div>
-                                    <div class="requisite-data">ООО МКК "x"</div>
-                                </div>
-                                <div class="info-tabs__item requisites__mob-item">
-                                    <div class="requisite-name">ИНН:</div>
-                                    <div class="requisite-data">1111111111</div>
-                                </div>
-                                <div class="info-tabs__item requisites__mob-item">
-                                    <div class="requisite-name">КПП:</div>
-                                    <div class="requisite-data">111111111</div>
-                                </div>
-                                <div class="info-tabs__item requisites__mob-item">
-                                    <div class="requisite-name">ОГРН:</div>
-                                    <div class="requisite-data">1111111111111</div>
-                                </div>
-                                <div class="info-tabs__item requisites__mob-item">
-                                    <div class="requisite-name">ОКПО:</div>
-                                    <div class="requisite-data">11111111</div>
-                                </div>
-                                <div class="info-tabs__item requisites__mob-item">
-                                    <div class="requisite-name">Расчетный счет:</div>
-                                    <div class="requisite-data">10101110111110000011</div>
-                                </div>
-                                <div class="info-tabs__item requisites__mob-item">
-                                    <div class="requisite-name">Банк:</div>
-                                    <div class="requisite-data">ФИЛИАЛ "САНКТ-ПЕТЕРБУРГСКИЙ" АО "АЛЬФА-БАНК"</div>
-                                </div>
-                                <div class="info-tabs__item requisites__mob-item">
-                                    <div class="requisite-name">БИК:</div>
-                                    <div class="requisite-data">011010111</div>
-                                </div>
-                                <div class="info-tabs__item requisites__mob-item">
-                                    <div class="requisite-name">Корр. счет:</div>
-                                    <div class="requisite-data">10101110100000000111</div>
-                                </div>
-                                <div class="info-tabs__item requisites__mob-item">
-                                    <div class="requisite-name">Юридический адрес:</div>
-                                    <div class="requisite-data">информация о юридическом адресе</div>
-                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
-            <section class="contacts pb-150">
-                <div class="container">
-                     <h2 class="mb-20 text-center">Остались вопросы?</h2>
+                    <div class="main-info-mobile__card">
+                        <div class="main-info-mobile__title"> <span>Документы</span>
 
-                    <div class="text-center text-grey mb-50 mb-md-20">Свяжитесь с нами</div>
-                    <div class="d-flex justify-content-center">
-                        <div class="custom-column-big d-flex">
-                            <div class="contacts__card">
-                                <div class="d-flex justify-content-between">
-                                    <div class="uppercase">Телефон</div>
-                                    <div class="">
-                                        <img src="images/icons/Communication/Phone.svg" alt="">
-                                    </div>
-                                </div> <a href="tel:+79123456789" class="text-ruby text-24">+7 (912) 345-67-89</a>
+                            <svg width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="Arrow">
+                                    <path id="Vector" d="M19 9L12 16L5 9" stroke="#A3A3A3" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="main-info-mobile__body">
+                            <div class="info-tabs__item"> <a href="#">Общие условия
+                <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path id="Vector 1" d="M13 0V24M13 24L1 12M13 24L25 12" stroke="#151515" stroke-width="2"/>
+                    </svg>
+                </a>
 
                             </div>
-                            <div class="contacts__card">
-                                <div class="d-flex justify-content-between">
-                                    <div class="uppercase">Почта</div>
-                                    <div class="">
-                                        <img src="images/icons/Communication/Mail.svg" alt="">
-                                    </div>
-                                </div> <a href="mailto:info@creditboost.com" class="text-ruby uppercase text-24">info@creditboost.com</a>
+                            <div class="info-tabs__item"> <a href="#">Правила предоставления микрозайма
+                <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path id="Vector 1" d="M13 0V24M13 24L1 12M13 24L25 12" stroke="#151515" stroke-width="2"/>
+                    </svg>
+                </a>
+
+                            </div>
+                            <div class="info-tabs__item"> <a href="#">Правила №195 комбинированного страхования
+                <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path id="Vector 1" d="M13 0V24M13 24L1 12M13 24L25 12" stroke="#151515" stroke-width="2"/>
+                    </svg>
+                </a>
+
+                            </div>
+                            <div class="info-tabs__item"> <a href="#">Свидетельство о постановке на учет
+                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path id="Vector 1" d="M13 0V24M13 24L1 12M13 24L25 12" stroke="#151515" stroke-width="2"/>
+                    </svg>
+                </a>
+
+                            </div>
+                            <div class="info-tabs__item"> <a href="#">Политика обработки и защиты персональных данных
+                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path id="Vector 1" d="M13 0V24M13 24L1 12M13 24L25 12" stroke="#151515" stroke-width="2"/>
+                    </svg>
+                </a>
+
+                            </div>
+                            <div class="info-tabs__item"> <a href="#">Базовый стандарт МФО
+                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path id="Vector 1" d="M13 0V24M13 24L1 12M13 24L25 12" stroke="#151515" stroke-width="2"/>
+                    </svg>
+                </a>
+
+                            </div>
+                            <div class="info-tabs__item"> <a href="#">Информация об условиях предоставления, использования и возврата микрозайма
+                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path id="Vector 1" d="M13 0V24M13 24L1 12M13 24L25 12" stroke="#151515" stroke-width="2"/>
+                    </svg>
+                </a>
+
+                            </div>
+                            <div class="info-tabs__item"> <a href="#">Согласие СОПД
+                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path id="Vector 1" d="M13 0V24M13 24L1 12M13 24L25 12" stroke="#151515" stroke-width="2"/>
+                    </svg>
+                </a>
+
+                            </div>
+                            <div class="info-tabs__item"> <a href="#">Свидетельство о внесении в реестр МФО
+                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path id="Vector 1" d="M13 0V24M13 24L1 12M13 24L25 12" stroke="#151515" stroke-width="2"/>
+                    </svg>
+                </a>
 
                             </div>
                         </div>
                     </div>
+                    <div class="main-info-mobile__card">
+                        <div class="main-info-mobile__title"> <span>Реквизиты</span>
+
+                            <svg width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="Arrow">
+                                    <path id="Vector" d="M19 9L12 16L5 9" stroke="#A3A3A3" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="main-info-mobile__body">
+                            <div class="info-tabs__item requisites__mob-item">
+                                <div class="requisite-name">Полное наименование:</div>
+                                <div class="requisite-data">Общество с ограниченной ответственностью Микрокредитная Компания "x"</div>
+                            </div>
+                            <div class="info-tabs__item requisites__mob-item">
+                                <div class="requisite-name">Сокращённое наименование:</div>
+                                <div class="requisite-data">ООО МКК "x"</div>
+                            </div>
+                            <div class="info-tabs__item requisites__mob-item">
+                                <div class="requisite-name">ИНН:</div>
+                                <div class="requisite-data">1111111111</div>
+                            </div>
+                            <div class="info-tabs__item requisites__mob-item">
+                                <div class="requisite-name">КПП:</div>
+                                <div class="requisite-data">111111111</div>
+                            </div>
+                            <div class="info-tabs__item requisites__mob-item">
+                                <div class="requisite-name">ОГРН:</div>
+                                <div class="requisite-data">1111111111111</div>
+                            </div>
+                            <div class="info-tabs__item requisites__mob-item">
+                                <div class="requisite-name">ОКПО:</div>
+                                <div class="requisite-data">11111111</div>
+                            </div>
+                            <div class="info-tabs__item requisites__mob-item">
+                                <div class="requisite-name">Расчетный счет:</div>
+                                <div class="requisite-data">10101110111110000011</div>
+                            </div>
+                            <div class="info-tabs__item requisites__mob-item">
+                                <div class="requisite-name">Банк:</div>
+                                <div class="requisite-data">ФИЛИАЛ "САНКТ-ПЕТЕРБУРГСКИЙ" АО "АЛЬФА-БАНК"</div>
+                            </div>
+                            <div class="info-tabs__item requisites__mob-item">
+                                <div class="requisite-name">БИК:</div>
+                                <div class="requisite-data">011010111</div>
+                            </div>
+                            <div class="info-tabs__item requisites__mob-item">
+                                <div class="requisite-name">Корр. счет:</div>
+                                <div class="requisite-data">10101110100000000111</div>
+                            </div>
+                            <div class="info-tabs__item requisites__mob-item">
+                                <div class="requisite-name">Юридический адрес:</div>
+                                <div class="requisite-data">информация о юридическом адресе</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </section>
+        </div>
+        </section>
+        <section class="contacts pb-150">
+            <div class="container">
+                 <h2 class="mb-20 text-center">Остались вопросы?</h2>
+
+                <div class="text-center text-grey mb-50 mb-md-20">Свяжитесь с нами</div>
+                <div class="d-flex justify-content-center">
+                    <div class="custom-column-big d-flex">
+                        <div class="contacts__card">
+                            <div class="d-flex justify-content-between">
+                                <div class="uppercase">Телефон</div>
+                                <div class="">
+                                    <img src="images/icons/Communication/Phone.svg" alt="">
+                                </div>
+                            </div> <a href="tel:+79123456789" class="text-ruby text-24">+7 (912) 345-67-89</a>
+
+                        </div>
+                        <div class="contacts__card">
+                            <div class="d-flex justify-content-between">
+                                <div class="uppercase">Почта</div>
+                                <div class="">
+                                    <img src="images/icons/Communication/Mail.svg" alt="">
+                                </div>
+                            </div> <a href="mailto:info@creditboost.com" class="text-ruby uppercase text-24">info@creditboost.com</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         </div>
         <div class="modal" id="conditions-modal">
             <div class="popup">
@@ -853,7 +855,7 @@
         </footer>
         <script src="./js/bootstrap.min.js"></script>
         <script src="./js/inputmask.js"></script>
-        <script src="./js/scripts.js"></script>
+        <script src="./js/main.js"></script>
     </body>
 
 </html>
