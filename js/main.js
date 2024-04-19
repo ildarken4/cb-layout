@@ -690,3 +690,106 @@ if (popupEmailButton) {
 }
 
 
+const hintedInputs = document.querySelectorAll('.js-hinted-input');
+
+if(hintedInputs) {
+
+    hintedInputs.forEach(function(hintedInput) {
+        var input = hintedInput.querySelector('input');
+        var inputHint = hintedInput.querySelector('.input-hint');
+
+        input.addEventListener('focus', function() {
+            inputHint.classList.add('active');
+        });
+
+        input.addEventListener('blur', function() {
+            inputHint.classList.remove('active');
+        });
+    });
+
+}
+
+// Показ/скрытие поля password
+
+let formInputs = document.querySelectorAll('.form-input');
+
+if(formInputs) {
+    formInputs.forEach(function(formInput) {
+        var showPassword = formInput.querySelector('.show-password'); 
+        var input = formInput.querySelector('input[type="password"]');
+
+        showPassword.addEventListener('click', function() {
+            if (input.type === 'password') {
+                input.type = 'text';
+            } else {
+                input.type = 'password';
+            }
+        });
+    });
+}
+
+// Проверка соответствия паролей и отправка данных
+
+
+// Находим элементы и блоки на странице
+    const newPassword = document.getElementById('new-password');
+    const confirmPassword = document.getElementById('confirm-password');
+    const popupPasswordButton = document.querySelector('.popup-password-button');
+    const inputErrors = document.querySelectorAll('.input-error');
+
+    if(newPassword) {
+    // Функция для проверки заполненности полей
+        function checkFields() {
+            if (newPassword.value && confirmPassword.value) {
+                popupPasswordButton.classList.remove('btn-disabled');
+            } else {
+                popupPasswordButton.classList.add('btn-disabled');
+            }
+        }
+
+        // Функция для проверки совпадения паролей
+        function checkPasswords() {
+            if (newPassword.value !== confirmPassword.value) {
+                newPassword.classList.add('error');
+                confirmPassword.classList.add('error');
+                inputErrors.forEach(function(error) {
+                    error.classList.add('active');
+                });
+            } else {
+                newPassword.classList.remove('error');
+                confirmPassword.classList.remove('error');
+                newPassword.value = '';
+                confirmPassword.value = '';
+                inputErrors.forEach(function(error) {
+                    error.classList.remove('active');
+                });
+                changeModal('set-password-modal', 'password-success-modal')
+            }
+        }
+
+        // Обработчики событий для полей паролей и кнопки
+        newPassword.addEventListener('input', checkFields);
+        confirmPassword.addEventListener('input', checkFields);
+        popupPasswordButton.addEventListener('click', function(event) {
+            event.preventDefault(); // Отменяем стандартное поведение кнопки
+            checkPasswords(); // Проверяем совпадение паролей
+        });
+
+
+        // Проверка пароля на наличие латинских букв и цифр
+
+        function checkPasswordOnBlur() {
+            var password = newPassword.value;
+            
+            var regex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+            
+            if (regex.test(password)) {
+                newPassword.classList.remove('error');
+            } else {
+                newPassword.classList.add('error');
+            }
+        }
+
+        newPassword.addEventListener('blur', checkPasswordOnBlur);
+    }
+    

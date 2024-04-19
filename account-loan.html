@@ -301,7 +301,7 @@
             <div class="popup popup-small bg-lightgrey">
                 <div class="popup__top">
                     <div class="popup__title">Задайте пароль</div>
-                    <button class="modal-close" onclick="changeModal('set-password-modal', 'password-success-modal')">
+                    <button class="modal-close" onclick="closeModal()">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                         fill="none">
                             <path d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18" stroke="#151515"
@@ -314,18 +314,31 @@
                         <form action="" class="popup-form password-form">
                             <div class="new-password mb-30">
                                 <div class="mb-5">Придумайте пароль</div>
-                                <div class="form-input popup-input">
-                                    <input type="password" id="new-password" class="error" placeholder="Введите пароль">
+                                <div class="form-input popup-input js-hinted-input">
+                                    <input type="password" class="password-input" id="new-password" placeholder="Введите пароль"
+                                    autocomplete="off">
+                                    <div class="show-password">
+                                        <img src="images/icons/password-eye.svg" alt="">
+                                    </div>
+                                    <div class="input-hint">
+                                        <div class="input-hint__title">Пароль должен содержать</div>
+                                        <div class="input-hint__text">- 8 символов латинского алфавита (A-z)</div>
+                                        <div class="input-hint__text">- цифры (0-9)</div>
+                                    </div>
                                 </div>
-                                <div class="input-error">Ошибка</div>
                             </div>
                             <div class="confirm-password mb-40">
                                 <div class="mb-5">Повторите пароль</div>
                                 <div class="form-input popup-input">
-                                    <input type="password" id="confirm-password" class="error" placeholder="Введите пароль">
+                                    <input type="password" class="password-input" id="confirm-password" placeholder="Введите пароль"
+                                    autocomplete="off">
+                                    <div class="show-password">
+                                        <img src="images/icons/password-eye.svg" alt="">
+                                    </div>
                                 </div>
-                                <div class="input-error">Ошибка</div>
+                                <div class="input-error">Пароли не совпадают</div>
                             </div>
+                            <button class="btn btn-disabled popup-password-button">Подтвердить</button>
                         </form>
                     </div>
                 </div>
