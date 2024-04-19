@@ -677,10 +677,16 @@ function getSecondsText(seconds) {
 }
 
 // Обработчик клика по кнопке
-document.querySelector('.popup-email-button').addEventListener('click', function () {
-    if (!this.classList.contains('btn-disabled')) {
-        this.classList.add('btn-disabled');
-        startEmailTimer();
-    }
-});
+
+const popupEmailButton = document.querySelector('.popup-email-button');
+
+if (popupEmailButton) {
+    popupEmailButton.addEventListener('click', function () {
+        if (!this.classList.contains('btn-disabled')) {
+            this.classList.add('btn-disabled');
+            startEmailTimer();
+        }
+    });
+}
+
 
