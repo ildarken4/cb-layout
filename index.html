@@ -157,8 +157,9 @@
                                 <div class="calculator__phone mb-40">
                                     <div class="text-500 text-24 mb-15 mb-md-5">Ваш номер телефона:</div>
                                     <div class="form-input calculator-input">
-                                        <input type="tel" id="calculator-phone" placeholder="Введите ваш номер">
+                                        <input type="tel" id="calculator-phone" class="error" placeholder="Введите ваш номер">
                                     </div>
+                                    <div class="input-error">Ошибка</div>
                                 </div>
                                 <button class="btn mb-20">Получить заём</button>
                                 <div class="d-flex mb-16">
@@ -187,19 +188,17 @@
                 </div>
             </section>
             <section class="learn pt-60 pt-md-0 pb-60 pb-md-25">
-                <div class="container">
-                    <ul class="nav nav-tabs" id="learn-tab" role="tablist">
-                        <li class="nav-item mr-30 mr-md-0" role="presentation">
-                            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
-                            type="button" role="tab" aria-controls="home" aria-selected="true">Как получить займ</button>
+                <div class="container tabs">
+                    <ul class="nav nav-tabs" id="learn-tab">
+                        <li class="nav-item mr-30 mr-md-0">
+                            <button class="nav-link active" id="home-tab">Как получить займ</button>
                         </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
-                            type="button" role="tab" aria-controls="profile" aria-selected="false">Как погасить займ</button>
+                        <li class="nav-item">
+                            <button class="nav-link" id="profile-tab">Как погасить займ</button>
                         </li>
                     </ul>
                     <div class="tab-content pt-48 pt-md-0" id="learn-tabs">
-                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <div class="tab-pane fade active" id="home" aria-labelledby="home-tab">
                             <div class="row justify-content-center learn__cards pl-100 pr-100 pl-md-0 pr-md-0">
                                 <div class="col-lg-4 col-md-4 learn__card mb-md-20">
                                      <h4 class="">Заполните заявку</h4>
@@ -219,7 +218,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <div class="tab-pane fade" id="profile" aria-labelledby="profile-tab">
                             <div class="row justify-content-center learn__cards pl-100 pr-100 pl-md-0 pr-md-0">
                                 <div class="col-lg-4 col-md-4 learn__card mb-md-20">
                                      <h4 class="">Дождитесь решения</h4>
@@ -258,27 +257,23 @@
                     </div>
                 </div>
                 <div class="main-info-desktop">
-                    <div class="info-tabs custom-column-big">
+                    <div class="info-tabs tabs custom-column-big">
                         <ul class="nav nav-tabs about-nav mb-20" id="about-tab" role="tablist">
                             <li class="nav-item mr-30 mr-md-0" role="presentation">
-                                <button class="nav-link active" id="faq-tab" data-bs-toggle="tab" data-bs-target="#faq"
-                                type="button" role="tab" aria-controls="faq" aria-selected="true">Вопросы и ответы</button>
+                                <button class="nav-link active" id="faq-tab">Вопросы и ответы</button>
                             </li>
                             <li class="nav-item mr-30 mr-md-0" role="presentation">
-                                <button class="nav-link" id="other-info-tab" data-bs-toggle="tab" data-bs-target="#other-info"
-                                type="button" role="tab" aria-controls="other-info" aria-selected="false">Другая информация</button>
+                                <button class="nav-link" id="other-info-tab">Другая информация</button>
                             </li>
                             <li class="nav-item mr-30 mr-md-0" role="presentation">
-                                <button class="nav-link" id="docs-tab" data-bs-toggle="tab" data-bs-target="#docs"
-                                type="button" role="tab" aria-controls="docs" aria-selected="false">Документы</button>
+                                <button class="nav-link" id="docs-tab">Документы</button>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="requisites-tab" data-bs-toggle="tab" data-bs-target="#requisites"
-                                type="button" role="tab" aria-controls="requisites" aria-selected="false">Реквизиты</button>
+                                <button class="nav-link" id="requisites-tab">Реквизиты</button>
                             </li>
                         </ul>
                         <div class="tab-content pt-48" id="about-tabs">
-                            <div class="tab-pane fade show active" id="faq" role="tabpanel" aria-labelledby="faq-tab">
+                            <div class="tab-pane fade show active" id="faq" aria-labelledby="faq-tab">
                                 <div class="faq">
                                     <div class="faq__item info-tabs__item">
                                         <div class="faq__question d-flex justify-content-between">
@@ -331,7 +326,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-pane fade" id="other-info" role="tabpanel" aria-labelledby="other-info-tab">
+                            <div class="tab-pane fade" id="other-info" aria-labelledby="other-info-tab">
                                 <div class="info-tabs__item"> <span class="item-number">01</span>
  <a href="#">
                         Ссылки на официальный сайт Банка России в информационно-телекоммуникационной сети "Интернет" (далее - сайт Банка России) и на страницу сайта Банка России...
@@ -369,7 +364,7 @@
 
                                 </div>
                             </div>
-                            <div class="tab-pane fade" id="docs" role="tabpanel" aria-labelledby="docs-tab">
+                            <div class="tab-pane fade" id="docs" aria-labelledby="docs-tab">
                                 <div class="info-tabs__item"> <span class="item-number">01</span>
  <a href="#">Общие условия
                         <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -444,7 +439,7 @@
                                 </div>
                                 <div class="show-all text-grey underlined text-center mt-20">Показать весь список</div>
                             </div>
-                            <div class="tab-pane fade" id="requisites" role="tabpanel" aria-labelledby="requisites-tab">
+                            <div class="tab-pane fade" id="requisites" aria-labelledby="requisites-tab">
                                 <div class="requisites__item">
                                     <div class="requisite-name">Полное наименование:</div>
                                     <div>Общество с ограниченной ответственностью Микрокредитная Компания "x"</div>

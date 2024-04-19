@@ -28,6 +28,22 @@ function enableBodyScroll() {
         scrollPosition = undefined;
     }
 }
+// Клик вне .popup
+document.addEventListener('mouseup', function (e) {
+    const popups = document.querySelectorAll('.popup');
+
+    popups.forEach(popup => {
+        const modal = popup.closest('.modal'); // Получаем ближайший родитель .modal для текущего .popup
+
+        // Проверяем наличие .active у родителя .modal
+        if (modal && modal.classList.contains('active')) {
+            if (!popup.contains(e.target)) {
+                closeModal();
+            }
+        }
+    });
+});
+
 
 // Открыть модальное окно
 function openModal(modalName) {
@@ -35,12 +51,7 @@ function openModal(modalName) {
     modal.classList.add("active");
     disableBodyScroll();
 
-    // Клик вне .popup
-    document.addEventListener('mouseup', function (e) {
-        if (!popup.contains(e.target)) {
-            closeModal()
-        }
-    });
+    
 }
 
 // Переключить модальное окно
@@ -50,12 +61,7 @@ function changeModal(modal1, modal2) {
     let closingModal = document.getElementById(modal1);
     openingModal.classList.add("active");
     closingModal.classList.remove("active");
-    // Клик вне .popup
-    document.addEventListener('mouseup', function (e) {
-        if (!popup.contains(e.target)) {
-            closeModal()
-        }
-    });
+
 }
 
 // Закрыть модальное окно
@@ -535,49 +541,146 @@ if (customSelects) {
     })
 }
 
+const accountSlider = document.querySelector('.account-slider');
+const accountSliderMob = document.querySelector('.account-slider-mob');
 
-const historyCardsList = document.querySelector('.history-cards-list');
+if (accountSlider) {
+    const accountSwiper = new Swiper('.account-slider', {
+        spaceBetween: 30,
+        // Navigation arrows
+        navigation: {
+            nextEl: '.slider-next',
+            prevEl: '.slider-prev',
+        },
 
-if (historyCardsList) {
-    const historyCards = Array.from(historyCardsList.querySelectorAll('.history-card'));
-    // Разбиваем карточки на группы по 6 штук
-    function groupCards (slidesNum) {
-        let groupedCards = [];
-        for (let i = 0; i < historyCards.length; i += slidesNum) {
-            groupedCards.push(historyCards.slice(i, i + slidesNum));
-        }
-        historyCardsList.innerHTML = '';
-        // Создаем слайды и добавляем карточки в них
-        groupedCards.forEach(group => {
-            const slide = document.createElement('div');
-            slide.classList.add('slide');
-            group.forEach(card => slide.appendChild(card));
-            historyCardsList.appendChild(slide);
-        });
-    }
-    
-    function regroupSlides () {
-        screenWidth = window.screen.width;
-
-        if (screenWidth >= 768) {
-            groupCards(6);
-        } else {
-            groupCards(3);
-        }
-    }
-    // Задержка перед вызовом обработчика (в миллисекундах)
-    const debounceDelay = 250; // Например, 250 мс
-
-    let resizeTimeout;
-
-    // Функция-обработчик события изменения размера окна
-    function handleResize() {
-        // Очищаем предыдущий таймаут, если он есть
-        clearTimeout(resizeTimeout);
-        // Устанавливаем новый таймаут для вызова обработчика
-        resizeTimeout = setTimeout(regroupSlides, debounceDelay);
-    }
-
-    window.addEventListener('resize', handleResize);
-    regroupSlides();
+        pagination: {
+            el: '.slider-counter',
+            type: 'fraction',
+            renderFraction: function (currentClass, totalClass) {
+                return '<div class="current-slide ' + currentClass + '"></div>' +
+                    ' <div class="line"></div> ' +
+                    '<div class=" total-slide ' + totalClass + '"></div>';
+            },
+        },
+    });
 }
+
+if (accountSliderMob) {
+    const accountSwiperMob = new Swiper('.account-slider-mob', {
+        spaceBetween: 30,
+        // Navigation arrows
+        navigation: {
+            nextEl: '.slider-next-mob',
+            prevEl: '.slider-prev-mob',
+        },
+        pagination: {
+            el: '.slider-counter',
+            type: 'fraction',
+            renderFraction: function (currentClass, totalClass) {
+                return '<div class="current-slide ' + currentClass + '"></div>' +
+                    ' <div class="line"></div> ' +
+                    '<div class=" total-slide ' + totalClass + '"></div>';
+            },
+        },
+    });
+}
+
+
+
+// переключение вкладок c инфой на главной
+
+const tabsContainers = document.querySelectorAll('.tabs');
+
+var navLinks = document.querySelectorAll('.tabs .nav-tabs .nav-link');
+
+if (tabsContainers) {
+
+    tabsContainers.forEach(function(tabsContainer) {
+        var navLinks = tabsContainer.querySelectorAll('.nav-tabs .nav-link');
+        navLinks.forEach(function (navLink) {
+            navLink.addEventListener('click', function (event) {
+                event.preventDefault(); 
+                
+                navLinks.forEach(function (link) {
+                    link.classList.remove('active');
+                });
+                navLink.classList.add('active');
+                var targetId = navLink.getAttribute('id');
+                var tabPanes = tabsContainer.querySelectorAll('.tab-content .tab-pane');
+                tabPanes.forEach(function (tabPane) {
+                    tabPane.classList.remove('active');
+                    var ariaLabelledBy = tabPane.getAttribute('aria-labelledby');
+                    if (ariaLabelledBy === targetId) {
+                        tabPane.classList.add('active');
+                    }
+                });
+            });
+        });
+    })
+}
+
+
+// Открытие графика платежей
+
+const scheduleButton = document.querySelector('.schedule-btn');
+const scheduleModal = document.querySelector('.schedule-modal');
+const scheduleClose = document.querySelector('.schedule-close');
+
+if(scheduleButton) {
+    scheduleButton.addEventListener('click', function () {
+        scheduleModal.classList.add('active');
+    });
+    scheduleClose.addEventListener('click', function () {
+        scheduleModal.classList.remove('active');
+    })
+}
+
+
+let timer;
+
+function startEmailTimer() {
+    clearInterval(timer); // Остановка предыдущего таймера, если он существует
+
+    let seconds = 59;
+    const button = document.querySelector('.popup-email-button');
+    button.classList.add('btn-disabled');
+    // Функция обновления таймера
+    function updateTimer() {
+        const timerElement = document.querySelector('.popup-timer');
+        
+
+        if (seconds >= 0) {
+            const secondsText = getSecondsText(seconds);
+            timerElement.textContent = seconds + ' ' + secondsText;
+            seconds--;
+        } else {
+            clearInterval(timer);
+            button.classList.remove('btn-disabled');
+        }
+    }
+
+    updateTimer();
+
+    timer = setInterval(updateTimer, 1000);
+}
+
+
+// Функция определения правильного окончания для слова "секунда"
+function getSecondsText(seconds) {
+    if (seconds === 1 || (seconds > 20 && seconds % 10 === 1)) {
+        return 'секунда';
+    } else if ((seconds >= 2 && seconds <= 4) || (seconds > 20 && seconds % 10 >= 2 && seconds % 10 <= 4)) {
+        return 'секунды';
+    } else {
+        return 'секунд';
+    }
+}
+
+// Обработчик клика по кнопке
+document.querySelector('.popup-email-button').addEventListener('click', function () {
+    if (!this.classList.contains('btn-disabled')) {
+        this.classList.add('btn-disabled');
+        startEmailTimer();
+    }
+});
+
