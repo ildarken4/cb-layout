@@ -511,7 +511,7 @@ if(sameWrappers) {
 }
 
 
-// кастомный селект (выбор карты в лк)
+// кастомный селект (ЛК и flow)
 
 const customSelects = document.querySelectorAll('.custom-select');
 
@@ -520,7 +520,6 @@ if (customSelects) {
         let customSelectToggler = customSelect.querySelector('.custom-select__head');
         let customSelectResult = customSelect.querySelector('.custom-select__result');
         let customSelectOptions = customSelect.querySelectorAll('.custom-option');
-        console.log('customSelectOptions: ', customSelectOptions);
         
         customSelectToggler.addEventListener('click', function() {
             this.parentNode.classList.toggle('active')
@@ -529,13 +528,13 @@ if (customSelects) {
         customSelectOptions.forEach(function(customSelectOption) {
             customSelectOption.addEventListener('click', function() {
                 let customValue = customSelectOption.querySelector('.custom-select__value').textContent;
-                console.log('customValue: ', customValue);
                 customSelectOptions.forEach(function(item) {
                     item.removeAttribute('selected');
                 })
                 this.setAttribute('selected', '');
                 customSelectResult.textContent = customValue;
                 customSelect.classList.remove('active');
+                customSelectToggler.classList.add('selected');
             })
         })
     })
@@ -711,9 +710,11 @@ if(hintedInputs) {
 
 // Показ/скрытие поля password
 
-let formInputs = document.querySelectorAll('.form-input');
+const passwordField = document.querySelector('.show-password');
 
-if(formInputs) {
+if (passwordField) {
+    let formInputs = document.querySelectorAll('.form-input');
+
     formInputs.forEach(function(formInput) {
         var showPassword = formInput.querySelector('.show-password'); 
         var input = formInput.querySelector('input[type="password"]');
@@ -732,64 +733,178 @@ if(formInputs) {
 
 
 // Находим элементы и блоки на странице
-    const newPassword = document.getElementById('new-password');
-    const confirmPassword = document.getElementById('confirm-password');
-    const popupPasswordButton = document.querySelector('.popup-password-button');
-    const inputErrors = document.querySelectorAll('.input-error');
+const newPassword = document.getElementById('new-password');
+const confirmPassword = document.getElementById('confirm-password');
+const popupPasswordButton = document.querySelector('.popup-password-button');
+const inputErrors = document.querySelectorAll('.input-error');
 
-    if(newPassword) {
-    // Функция для проверки заполненности полей
-        function checkFields() {
-            if (newPassword.value && confirmPassword.value) {
-                popupPasswordButton.classList.remove('btn-disabled');
-            } else {
-                popupPasswordButton.classList.add('btn-disabled');
-            }
+if(newPassword) {
+// Функция для проверки заполненности полей
+    function checkFields() {
+        if (newPassword.value && confirmPassword.value) {
+            popupPasswordButton.classList.remove('btn-disabled');
+        } else {
+            popupPasswordButton.classList.add('btn-disabled');
         }
-
-        // Функция для проверки совпадения паролей
-        function checkPasswords() {
-            if (newPassword.value !== confirmPassword.value) {
-                newPassword.classList.add('error');
-                confirmPassword.classList.add('error');
-                inputErrors.forEach(function(error) {
-                    error.classList.add('active');
-                });
-            } else {
-                newPassword.classList.remove('error');
-                confirmPassword.classList.remove('error');
-                newPassword.value = '';
-                confirmPassword.value = '';
-                inputErrors.forEach(function(error) {
-                    error.classList.remove('active');
-                });
-                changeModal('set-password-modal', 'password-success-modal')
-            }
-        }
-
-        // Обработчики событий для полей паролей и кнопки
-        newPassword.addEventListener('input', checkFields);
-        confirmPassword.addEventListener('input', checkFields);
-        popupPasswordButton.addEventListener('click', function(event) {
-            event.preventDefault(); // Отменяем стандартное поведение кнопки
-            checkPasswords(); // Проверяем совпадение паролей
-        });
-
-
-        // Проверка пароля на наличие латинских букв и цифр
-
-        function checkPasswordOnBlur() {
-            var password = newPassword.value;
-            
-            var regex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
-            
-            if (regex.test(password)) {
-                newPassword.classList.remove('error');
-            } else {
-                newPassword.classList.add('error');
-            }
-        }
-
-        newPassword.addEventListener('blur', checkPasswordOnBlur);
     }
-    
+
+    // Функция для проверки совпадения паролей
+    function checkPasswords() {
+        if (newPassword.value !== confirmPassword.value) {
+            newPassword.classList.add('error');
+            confirmPassword.classList.add('error');
+            inputErrors.forEach(function(error) {
+                error.classList.add('active');
+            });
+        } else {
+            newPassword.classList.remove('error');
+            confirmPassword.classList.remove('error');
+            newPassword.value = '';
+            confirmPassword.value = '';
+            inputErrors.forEach(function(error) {
+                error.classList.remove('active');
+            });
+            changeModal('set-password-modal', 'password-success-modal')
+        }
+    }
+
+    // Обработчики событий для полей паролей и кнопки
+    newPassword.addEventListener('input', checkFields);
+    confirmPassword.addEventListener('input', checkFields);
+    popupPasswordButton.addEventListener('click', function(event) {
+        event.preventDefault(); // Отменяем стандартное поведение кнопки
+        checkPasswords(); // Проверяем совпадение паролей
+    });
+
+
+    // Проверка пароля на наличие латинских букв и цифр
+
+    function checkPasswordOnBlur() {
+        var password = newPassword.value;
+        
+        var regex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+        
+        if (regex.test(password)) {
+            newPassword.classList.remove('error');
+        } else {
+            newPassword.classList.add('error');
+        }
+    }
+
+    newPassword.addEventListener('blur', checkPasswordOnBlur);
+}
+
+// input[type=date]
+
+const dateInput = document.querySelector('input[type="date"]');
+
+if (dateInput) {
+    dateInput.addEventListener('change', function () {
+        if (this.value !== '') {
+            this.classList.add('selected-date');
+        } else {
+            this.classList.remove('selected-date');
+        }
+    });
+}
+
+
+// Вывод нащвания загруженного файла для input[type="file"] и переключение между загржаемыми фото
+const fileInputs = document.querySelectorAll('input[type="file"]');
+const nextStepBtn = document.querySelector('.next-step');
+
+if (fileInputs) {
+    const nextFileBtn = document.querySelector('.next-file');
+
+    fileInputs.forEach(function (fileInput) {
+        fileInput.addEventListener('change', function () {
+            const label = this.closest('label'); // Находим ближайший родительский элемент label
+            const fileNameDisplay = label.querySelector('.file-name'); // Находим элемент .file-name внутри label
+
+
+            if (this.files && this.files.length > 0) {
+                const fileName = this.files[0].name;
+                fileNameDisplay.textContent = fileName;
+                nextFileBtn.classList.remove('btn-disabled');
+                if (nextStepBtn) {
+                    if (!nextStepBtn.classList.contains('d-none')) {
+                        nextStepBtn.classList.remove('btn-disabled');
+                    }
+                }
+            } else {
+                fileNameDisplay.textContent = '';
+            }
+        });
+    });
+
+    function nextFile() {
+        // Перебираем элементы с классами .flow-photo-1, .flow-photo-2 и .flow-photo-3
+        for (let i = 1; i <= 3; i++) {
+            const currentPhoto = document.querySelector(`.flow-photo-${i}`);
+            if (!currentPhoto.classList.contains('d-none')) {
+                currentPhoto.classList.add('d-none');
+                const nextPhoto = document.querySelector(`.flow-photo-${i % 3 + 1}`);
+                nextPhoto.classList.remove('d-none');
+                nextFileBtn.classList.add('btn-disabled');
+
+                if (i == 2) {
+                    nextFileBtn.classList.add('d-none');
+                    nextStepBtn.classList.remove('d-none');
+                }
+                break;
+            }
+        }
+    }
+}
+
+
+// скрытие лишних полей на странице Место работы если Пенсионер
+
+const customOptions = document.querySelectorAll('.custom-option');
+
+if (document.querySelector('.job-retiree')) {
+    customOptions.forEach(function (option) {
+        option.addEventListener('click', function () {
+            const selectValue = this.querySelector('.custom-select__value');
+
+            if (selectValue) {
+                if (selectValue.classList.contains('job-retiree')) {
+                    // Если есть класс .job-retiree, добавляем класс .d-none к элементам .retiree-hide
+                    const retireeHideElements = document.querySelectorAll('.retiree-hide');
+                    retireeHideElements.forEach(function (element) {
+                        element.classList.add('d-none');
+                    });
+                } else {
+                    // Если нет класса .job-retiree, удаляем класс .d-none у элементов .retiree-hide
+                    const retireeHideElements = document.querySelectorAll('.retiree-hide');
+                    retireeHideElements.forEach(function (element) {
+                        element.classList.remove('d-none');
+                    });
+                }
+            }
+        });
+    });
+}
+
+// Отсчет 10 секунд на странице flow-card-added для перехода на следующую страницу
+
+const cardTimer = document.querySelector('.card-added-timer');
+
+if (cardTimer) {
+    let timer = 10;
+
+    function updateTimer() {
+        cardTimer.textContent = timer;
+
+        if (timer <= 0) {
+            // Если таймер достигает 1, переходим на страницу index.html
+            window.location.href = 'flow-card-photo.html';
+        } else {
+            timer--;
+            setTimeout(updateTimer, 1000);
+        }
+    }
+
+    // Запускаем таймер
+    updateTimer();
+}
