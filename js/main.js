@@ -84,14 +84,9 @@ if (verifyInputs) {
     Inputmask("9 9 9 9 9", {placeholder: "-"}).mask(verifyInputs);
 }
 
-let seriesInput = document.getElementById('passport-series');
-if (seriesInput) {
-    Inputmask({"mask": "99 99"}).mask(seriesInput);
-}
-
 let numberInput = document.getElementById('passport-number');
 if (numberInput) {
-    Inputmask({"mask": "99 99 99"}).mask(numberInput);
+    Inputmask({"mask": "99 99 999999"}).mask(numberInput);
 
 }
 
@@ -105,7 +100,7 @@ if (codeInput) {
     Inputmask({"mask": "999-999"}).mask(codeInput);
 }
 
-let incomeInput = document.getElementById('reg-income');
+let incomeInput = document.getElementsByClassName('input-sum');
 if (incomeInput) {
     Inputmask({
         alias: 'numeric',
@@ -907,4 +902,25 @@ if (cardTimer) {
 
     // Запускаем таймер
     updateTimer();
+}
+
+
+// активация кнопки "Завершить оформление" при выборе чекбокса
+
+const rulesCheckbox = document.getElementById('rules');
+const nextStepButton = document.querySelector('.next-step');
+
+
+if (rulesCheckbox && nextStepButton) {
+    function checkRulesCheckbox() {
+        if (rulesCheckbox.checked) {
+            nextStepButton.classList.remove('btn-disabled');
+        } else {
+            nextStepButton.classList.add('btn-disabled');
+        }
+    }
+
+    rulesCheckbox.addEventListener('change', checkRulesCheckbox);
+
+    checkRulesCheckbox();
 }
