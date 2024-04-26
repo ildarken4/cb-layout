@@ -804,7 +804,7 @@ if (dateInput) {
 }
 
 
-// Вывод нащвания загруженного файла для input[type="file"] и переключение между загржаемыми фото
+// Вывод названия загруженного файла для input[type="file"] и переключение между загржаемыми фото
 const fileInputs = document.querySelectorAll('input[type="file"]');
 const nextStepBtn = document.querySelector('.next-step');
 
