@@ -77,7 +77,8 @@
                                     <div class="form-item__label">Серия и номер паспорта<span class="text-ruby">*</span>
                                     </div>
                                     <div class="form-input">
-                                        <input type="text" id="passport-number" placeholder="Введите серию и номер паспорта">
+                                        <input type="text" id="passport-number" placeholder="Введите серию и номер паспорта"
+                                        required>
                                     </div>
                                     <div class="input-error">Обязательное поле</div>
                                 </div>
@@ -85,7 +86,8 @@
                                     <div class="form-item__label">Кем выдан<span class="text-ruby">*</span>
                                     </div>
                                     <div class="form-input">
-                                        <input type="text" id="passport-issued" placeholder="Введите название">
+                                        <input type="text" id="passport-issued" placeholder="Введите название"
+                                        required>
                                     </div>
                                     <div class="input-error">Обязательное поле</div>
                                 </div>
@@ -94,7 +96,7 @@
                                         <div class="form-item__label">Дата выдачи<span class="text-ruby">*</span>
                                         </div>
                                         <div class="form-input">
-                                            <input type="date" id="passport-date" placeholder="ДД.ММ.ГГ">
+                                            <input type="date" id="passport-date" placeholder="ДД.ММ.ГГ" required>
                                         </div>
                                         <div class="input-error">Обязательное поле</div>
                                     </div>
@@ -102,7 +104,8 @@
                                         <div class="form-item__label">Код подразделения<span class="text-ruby">*</span>
                                         </div>
                                         <div class="form-input">
-                                            <input type="text" id="passport-code" placeholder="Введите код подразделения">
+                                            <input type="text" id="passport-code" placeholder="Введите код подразделения"
+                                            required>
                                         </div>
                                         <div class="input-error">Обязательное поле</div>
                                     </div>
@@ -111,7 +114,8 @@
                                     <div class="form-item__label">Место рождения<span class="text-ruby">*</span>
                                     </div>
                                     <div class="form-input">
-                                        <input type="text" id="passport-birthplace" placeholder="Введите место рождения">
+                                        <input type="text" id="passport-birthplace" placeholder="Введите место рождения"
+                                        required>
                                     </div>
                                     <div class="input-error">Обязательное поле</div>
                                 </div>
@@ -119,7 +123,8 @@
                                     <div class="form-item__label">Адрес регистрации<span class="text-ruby">*</span>
                                     </div>
                                     <div class="form-input">
-                                        <input type="text" id="passport-address" placeholder="Введите адрес регистрации">
+                                        <input type="text" id="passport-address" placeholder="Введите адрес регистрации"
+                                        required>
                                     </div>
                                     <div class="input-error">Обязательное поле</div>
                                 </div>
@@ -128,20 +133,26 @@
  <span>Адрес регистрации совпадает с моим фактическим местом жительства</span>
 
                                 </label>
-                                <div class="form-item mt-10 mt-md-10 mb-40">
+                                <div class="form-item fact-address mt-10 mt-md-10 mb-40">
                                     <div class="form-item__label">Адрес фактического места жительства<span class="text-ruby">*</span>
                                     </div>
                                     <div class="form-input">
-                                        <input type="text" id="fact-address" placeholder="Введите адрес фактического проживания">
+                                        <input type="text" id="fact-address" placeholder="Введите адрес фактического проживания"
+                                        required>
                                     </div>
                                     <div class="input-error">Обязательное поле</div>
-                                </div> <a href="flow-photo.html" class="btn"> <span class="for-desktop">Перейти&nbsp;</span> к следующему шагу</a>
+                                </div> <a href="flow-photo.html" class="btn js-form-btn"> <span class="for-desktop">Перейти&nbsp;</span> к следующему шагу</a>
 
                             </form>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="notification error"> <span>Не все поля заполнены</span>
+
+            <img src="images/buttons/account-menu-close.svg"
+            alt="ошибка">
         </div>
         <footer class="footer">
             <div class="footer-wrapper">

@@ -924,3 +924,144 @@ if (rulesCheckbox && nextStepButton) {
 
     checkRulesCheckbox();
 }
+
+// меню в личном кабинете
+
+const accountMenuBtns = document.querySelectorAll('.account-menu-btn');
+const accountMenu = document.querySelector('.account-menu-modal');
+
+if (accountMenuBtns) {
+    accountMenuBtns.forEach(function (accountMenuBtn) {
+        accountMenuBtn.addEventListener('click', function () {
+            if (accountMenu.classList.contains('active')) {
+                accountMenu.classList.remove('active');
+                enableBodyScroll()
+            } else {
+                accountMenu.classList.add('active');
+                disableBodyScroll();
+            }
+        })
+    })
+   
+}
+
+const accountMenuItems = document.querySelectorAll('.account-menu__item');
+
+if (accountMenuItems) {
+    accountMenuItems.forEach(function(accountMenuItem) {
+        accountMenuItem.addEventListener('click', function () {
+            this.classList.remove('not-selected');
+            accountMenuItems.forEach(function (otherItem) {
+                if (otherItem !== accountMenuItem) {
+                    otherItem.classList.add('not-selected');
+                }
+            });
+        })
+    })
+}
+
+
+
+//проверка required полей
+
+var formBtn = document.querySelector('.js-form-btn');
+
+function validateForm() {
+    var formItems = document.querySelectorAll('.form-item');
+
+    formBtn.addEventListener('click', function (event) {
+        
+
+        // Проверяем каждое поле с атрибутом required
+        var hasEmptyFields = false;
+        formItems.forEach(function (formItem) {
+            var requiredInput = formItem.querySelector('input[required]');
+            if (requiredInput && !requiredInput.value.trim()) {
+                event.preventDefault();
+                requiredInput.classList.add('error');
+                formItem.querySelector('.input-error').classList.add('active');
+                hasEmptyFields = true;
+            } else if (requiredInput) {
+                requiredInput.classList.remove('error');
+                formItem.querySelector('.input-error').classList.remove('active');
+            }
+        });
+
+        // Проверяем, есть ли хотя бы одно незаполненное поле
+        if (hasEmptyFields) {
+            document.querySelector('.notification.error').classList.add('active');
+        } else {
+            document.querySelector('.notification.error').classList.remove('active');
+        }
+    });
+}
+if (formBtn) {
+    validateForm();
+}
+
+const notification = document.querySelector('.notification');
+if (notification) {
+    notification.addEventListener('click', function () {
+        this.classList.remove('active')
+    })
+}
+
+// скрытие поля адреса если фактический совпадает с регистрацией
+
+const sameAddress = document.querySelector('#same-address');
+const factAddress = document.querySelector('.fact-address');
+
+if (sameAddress) {
+    sameAddress.addEventListener('click', function() {
+        factAddress.classList.toggle('d-none');
+    })
+}
+
+// показ/скрытие информации о займе на странице ЛК с несколькими займами
+
+const loanCards = document.querySelectorAll('.account-body__card');
+
+
+if (loanCards) {
+    loanCards.forEach(function (loanCard) {
+        let loanDetailsBtn = loanCard.querySelector('.loan-details__btn');
+        let loanDetails = loanCard.querySelector('.loan-details__body');
+
+        if (loanDetails) {
+            loanDetailsBtn.addEventListener('click', function () {
+                loanDetails.classList.toggle('active');
+
+                if (loanDetails.classList.contains('active')) {
+                    loanDetailsBtn.textContent ='Свернуть';
+                } else {
+                    loanDetailsBtn.textContent = 'Подробнее о заеме'; 
+                }
+            })
+        }
+    })
+}
+
+// слайдер займов на странице ЛК с несколькими займами
+
+const loansSlider = document.querySelector('.loans-slider');
+
+if (loansSlider) {
+    const accountSwiper = new Swiper('.loans-slider', {
+        spaceBetween: 30,
+        // Navigation arrows
+        navigation: {
+            nextEl: '.slider-next',
+            prevEl: '.slider-prev',
+        },
+
+        pagination: {
+            el: '.slider-counter',
+            type: 'fraction',
+            renderFraction: function (currentClass, totalClass) {
+                return '<div class="current-slide ' + currentClass + '"></div>' +
+                    ' <div class="line"></div> ' +
+                    '<div class=" total-slide ' + totalClass + '"></div>';
+            },
+        },
+    });
+}
