@@ -31,6 +31,7 @@ function enableBodyScroll() {
 // Клик вне .popup
 document.addEventListener('mouseup', function (e) {
     const popups = document.querySelectorAll('.popup');
+    let headerNav = document.querySelector('.header-nav');
 
     popups.forEach(popup => {
         const modal = popup.closest('.modal'); // Получаем ближайший родитель .modal для текущего .popup
@@ -42,6 +43,8 @@ document.addEventListener('mouseup', function (e) {
             }
         }
     });
+
+    
 });
 
 
@@ -348,14 +351,50 @@ if (questions) {
 
 // Бургер меню 
 
-const mobNavToggler = document.querySelector('.mob-nav-toggler');
-const headerNav = document.querySelector('.header__nav');
+const navToggler = document.querySelector('.nav-toggler');
+const headerNav = document.querySelector('.header-nav');
+const overlay = document.querySelector('.overlay');
+const navTogglerText = document.querySelector('.nav-toggler__text');
+const navMenuLinks = document.querySelectorAll('nav a');
 
-if (mobNavToggler) {
-    mobNavToggler.addEventListener('click', function() {
-        this.classList.toggle('active');
-        headerNav.classList.toggle('opened');
+if (navToggler) {
+
+    function openNav () {
+        navToggler.classList.add('active');
+        headerNav.classList.add('active');
+        overlay.classList.add('active');
+
+        navTogglerText.textContent = "Закрыть";
+        disableBodyScroll();
+    }
+
+    function closeNav () {
+        navToggler.classList.remove('active');
+        headerNav.classList.remove('active');
+        overlay.classList.remove('active');
+
+        navTogglerText.textContent = "Открыть";
+        enableBodyScroll();
+    }
+    navToggler.addEventListener('click', function() {
+        if(this.classList.contains('active')) {
+            closeNav();
+        } else {
+            openNav();
+        }
+
+        
     });
+
+    overlay.addEventListener('click', function () {
+        closeNav();
+    });
+
+    navMenuLinks.forEach(function(navMenuLink) {
+        navMenuLink.addEventListener('click', function () {
+            closeNav();
+        })
+    })
 }
 
 // сообщение в нижнем углу
@@ -714,13 +753,16 @@ if (passwordField) {
         var showPassword = formInput.querySelector('.show-password'); 
         var input = formInput.querySelector('input[type="password"]');
 
-        showPassword.addEventListener('click', function() {
-            if (input.type === 'password') {
-                input.type = 'text';
-            } else {
-                input.type = 'password';
-            }
-        });
+        if (showPassword) {
+            showPassword.addEventListener('click', function() {
+                if (input.type === 'password') {
+                    input.type = 'text';
+                } else {
+                    input.type = 'password';
+                }
+            });
+        }
+        
     });
 }
 
@@ -819,15 +861,56 @@ if (fileInputs) {
 
             if (this.files && this.files.length > 0) {
                 const fileName = this.files[0].name;
-                fileNameDisplay.textContent = fileName;
-                nextFileBtn.classList.remove('btn-disabled');
+                if (fileNameDisplay) {
+                    fileNameDisplay.textContent = fileName;
+                }
+                if (nextFileBtn) {
+                    nextFileBtn.classList.remove('btn-disabled');
+                }
                 if (nextStepBtn) {
                     if (!nextStepBtn.classList.contains('d-none')) {
                         nextStepBtn.classList.remove('btn-disabled');
                     }
                 }
             } else {
-                fileNameDisplay.textContent = '';
+                if (fileNameDisplay) {
+                    fileNameDisplay.textContent = '';
+                }
+            }
+
+            var filesContainer = document.querySelector('.loaded-files');
+
+            if(filesContainer) {
+                filesContainer.classList.add('active');
+                var files = fileInput.files;
+        
+                for (var i = 0; i < files.length; i++) {
+                    var file = files[i];
+                    let fileName = file.name;
+                    var fileItem = document.createElement('div');
+                    let deleteButton = document.createElement('img');
+                    deleteButton.src = '../images/icons/Menu/Close_MD.svg';
+                    deleteButton.classList.add('delete-file');
+                    fileItem.classList.add('loaded-files__item');
+
+                    let fileNameBlock = document.createElement('div');
+                    fileNameBlock.classList.add('appeal-file');
+                    fileNameBlock.textContent = fileName;
+                    fileItem.appendChild(fileNameBlock);
+                    fileItem.appendChild(deleteButton);
+                    filesContainer.appendChild(fileItem);
+
+                    deleteButton.addEventListener('click', function() {
+                        let fileItems = filesContainer.querySelectorAll('.loaded-files__item');
+
+                        if(fileItems.length == 1) {
+                            filesContainer.classList.remove('active');
+                        }
+
+                        this.parentNode.parentNode.removeChild(this.parentNode);
+                        
+                    })
+                }
             }
         });
     });
@@ -1064,4 +1147,52 @@ if (loansSlider) {
             },
         },
     });
+}
+
+
+// Шкала процентов вероятности одобрения flow 
+
+const probability = document.querySelector('.probability');
+
+if (probability) {
+    let probabilityValue = probability.querySelector('.probability__percent span').textContent;
+    let probabilityScale = probability.querySelector('.probability-scale__fill');
+
+    probabilityScale.setAttribute('style', 'width: '+ probabilityValue + '%')
+    
+}
+
+// Показать/скрыть обращения на account-my-apepals
+
+const appeals = document.querySelectorAll('.appeals-row');
+
+if(appeals) {
+    function hideAppeals() {
+        for(let i = 0; i<= appeals.length-1 ; i++) {
+            if (i > 4) {
+                appeals[i].classList.add('d-none')
+            }
+        }
+    }
+
+    hideAppeals();
+    
+    
+    const showAppeals = document.querySelector('.show-appeals');
+
+    if(showAppeals) {
+        showAppeals.addEventListener('click', function () {
+            if(!this.classList.contains('active')) {
+                appeals.forEach(function(appeal) {
+                    appeal.classList.remove('d-none');
+                });
+                this.classList.add('active');
+                this.textContent = 'Свернуть';
+            } else {
+                hideAppeals();
+                this.classList.remove('active');
+                this.textContent = 'Показать все обращения';
+            }
+        })
+    }
 }

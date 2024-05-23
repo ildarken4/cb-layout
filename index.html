@@ -28,47 +28,37 @@
     </head>
     
     <body>
-        <header class="header">
+        <header class="header main-header">
             <div class="container">
-                <div class="header-content"> <a href="index.html" class="logo">
+                <div class="header-content main-header-content">
+                    <button class="nav-toggler">
+                        <div class="nav-toggler__text">Открыть</div>
+                        <div class="nav-toggler__lines">
+                            <div class="nav-toggler__line"></div>
+                            <div class="nav-toggler__line"></div>
+                            <div class="nav-toggler__line"></div>
+                        </div>
+                    </button> <a href="index.html" class="logo">
             <img src="images/Logo.svg" width="100%" alt="Логотип CreditBooster">
           </a>
 
-                    <nav class="header__nav"> <a href="index.html" class="logo for-devices mb-60">
-              <img src="images/Logo.svg" width="100%" alt="Логотип CreditBooster">
-            </a>
-
-                        <ul class="d-flex align-items-center justify-content-between">
-                            <li> <a href="#">
-                  Как получить займ
-                </a>
-
-                            </li>
-                            <li> <a href="#">
-                  О компании
-                </a>
-
-                            </li>
-                            <li> <a href="#">
-                  Условия займа
-                </a>
-
-                            </li>
-                            <li> <a href="#">
-                  Вопросы и ответы
-                </a>
-
-                            </li>
-                        </ul>
+                    <div class="header__buttons for-desktop">
+                        <button class="btn btn-rounded mr-20 mr-md-0">Внести платеж</button>
+                        <button class="btn btn-rounded btn-transparent login-btn">Войти
+                            <svg class="ml-10" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 15L15 12M15 12L12 9M15 12H4M4 7.24802V7.2002C4 6.08009 4 5.51962 4.21799 5.0918C4.40973 4.71547 4.71547 4.40973 5.0918 4.21799C5.51962 4 6.08009 4 7.2002 4H16.8002C17.9203 4 18.4796 4 18.9074 4.21799C19.2837 4.40973 19.5905 4.71547 19.7822 5.0918C20 5.5192 20 6.07899 20 7.19691V16.8036C20 17.9215 20 18.4805 19.7822 18.9079C19.5905 19.2842 19.2837 19.5905 18.9074 19.7822C18.48 20 17.921 20 16.8031 20H7.19691C6.07899 20 5.5192 20 5.0918 19.7822C4.71547 19.5905 4.40973 19.2839 4.21799 18.9076C4 18.4798 4 17.9201 4 16.8V16.75"
+                                stroke="#CD2759" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="header-nav">
+                <div class="container">
+                    <div class="row for-devices">
                         <div class="header__buttons">
-                            <div class="header__contacts mr-20">
-                                <div> <a href="tel:+79123456789">+7 (912) 345-67-89</a>
-
-                                </div>
-                                <div> <a href="mailto:info@creditboost.com">info@creditboost.com</a>
-
-                                </div>
-                            </div>
                             <button class="btn btn-rounded mr-20 mr-md-0">Внести платеж</button>
                             <button class="btn btn-rounded btn-transparent login-btn">Войти
                                 <svg class="ml-10" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -79,26 +69,60 @@
                                 </svg>
                             </button>
                         </div>
-                    </nav>
-                    <div class="mob-btns d-flex align-items-center gap-30">
-                        <button class="mob-login-btn">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 15L15 12M15 12L12 9M15 12H4M4 7.24802V7.2002C4 6.08009 4 5.51962 4.21799 5.0918C4.40973 4.71547 4.71547 4.40973 5.0918 4.21799C5.51962 4 6.08009 4 7.2002 4H16.8002C17.9203 4 18.4796 4 18.9074 4.21799C19.2837 4.40973 19.5905 4.71547 19.7822 5.0918C20 5.5192 20 6.07899 20 7.19691V16.8036C20 17.9215 20 18.4805 19.7822 18.9079C19.5905 19.2842 19.2837 19.5905 18.9074 19.7822C18.48 20 17.921 20 16.8031 20H7.19691C6.07899 20 5.5192 20 5.0918 19.7822C4.71547 19.5905 4.40973 19.2839 4.21799 18.9076C4 18.4798 4 17.9201 4 16.8V16.75"
-                                stroke="#CD2759" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                />
-                            </svg>
-                        </button>
-                        <div class="mob-nav-toggler for-devices">
-                            <div class="mob-nav-toggler__line"></div>
-                            <div class="mob-nav-toggler__line"></div>
-                            <div class="mob-nav-toggler__line"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <nav>
+                                <ul>
+                                    <li><a href="#learn">Как получить займ</a>
+
+                                    </li>
+                                    <li><a href="#about">О компании</a>
+
+                                    </li>
+                                    <li><a onclick="openModal('conditions-modal')">Условия займа</a>
+
+                                    </li>
+                                    <li><a href="#faq">Вопросы и ответы</a>
+
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="header-contacts">
+                                <div class="header-contacts__img">
+                                    <img src="images/header-contacts.png" alt="наши контакты">
+                                </div>
+                                <div class="header-contacts__content">
+                                    <div class="header-contacts__links"> <a href="tel:+79123456789" class="header-contacts__link">+7 (912) 345-67-89</a>
+
+                                        <a
+                                        href="mailto:info@sverhkassa.ru" class="header-contacts__link">info@sverhkassa.ru</a>
+                                    </div>
+                                    <div class="header-contacts__title">Нужно подать обращение?
+                                        <br>Сделайте это здесь.</div> <a href="account-appeal.html" class="header-contacts__btn">Подать обращение</a>
+
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="overlay"></div>
         </header>
         <div class="wrapper">
-            <section class="hero">
+            <section class="hero"> <a href="appeal.html" class="appeal-link">
+        <div class="appeal-link__wrapper for-desktop">
+            <div class="appeal-link__image">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M10 3.2233C10.6432 3.07735 11.3126 3.00029 12 3.00029C16.9706 3.00029 21 7.02972 21 12.0003C21 12.6933 20.9217 13.3681 20.7734 14.0161C20.6301 14.6421 20.6103 15.2943 20.7581 15.9192C21.0884 17.3148 21.3545 19.241 20.9801 20.5588C20.8224 21.1141 20.1354 21.1685 19.6239 20.9008C19.0289 20.5895 18.2964 20.3187 17.6456 20.114C16.9167 19.8848 16.1402 20.0302 15.434 20.322C14.3758 20.7591 13.2161 21.0003 12 21.0003C7.02944 21.0003 3 16.9709 3 12.0003C3 11.1328 3.12273 10.294 3.35177 9.50029M10.5 16.0003L10.5 8.00029M14.5 16.0003L14.5 12.0003M2 4.00029L4 4.00029M4 4.00029L6 4.00029M4 4.00029L4 6.00029M4 4.00029L4 2.00029" stroke="#CD2759" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="appeal-link__text">Подать обращение</div>
+        </div>
+    </a>
+
                 <div class="container">
                     <div class="row">
                          <h1 class="text-darkruby uppercase">
@@ -157,14 +181,15 @@
                                 <div class="calculator__phone mb-40">
                                     <div class="text-500 text-24 mb-15 mb-md-5">Ваш номер телефона:</div>
                                     <div class="form-input calculator-input">
-                                        <input type="tel" id="calculator-phone" class="error" placeholder="Введите ваш номер">
+                                        <input type="tel" id="calculator-phone" placeholder="Введите ваш номер"
+                                        required>
                                     </div>
                                     <div class="input-error">Ошибка</div>
                                 </div>
                                 <button class="btn mb-20">Получить заём</button>
                                 <div class="d-flex mb-16">
                                     <label for="rules" class="">
-                                        <input type="checkbox" id="rules"> <span class="custom-checkbox"></span>
+                                        <input type="checkbox" id="rules" required> <span class="custom-checkbox"></span>
  <span>Я ознакомлен и согласен со&nbsp;<a class="show-rules text-ruby underlined">следующим</a> </span>
 
                                     </label>
@@ -186,7 +211,8 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> <a name="learn"></a>
+
             <section class="learn pt-60 pt-md-0 pb-60 pb-md-25">
                 <div class="container tabs">
                     <ul class="nav nav-tabs" id="learn-tab">
@@ -240,7 +266,8 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> <a name="about"></a>
+
             <section class="pt-75 pb-75">
                 <div class="container">
                     <div class="row">
@@ -738,7 +765,8 @@
                     </div>
                 </div>
         </div>
-        </section>
+        </section> <a name="faq"></a>
+
         <section class="contacts pb-150">
             <div class="container">
                  <h2 class="mb-20 text-center">Остались вопросы?</h2>

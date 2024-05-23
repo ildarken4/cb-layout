@@ -27,47 +27,37 @@
     </head>
     
     <body>
-        <header class="header">
+        <header class="header main-header">
             <div class="container">
-                <div class="header-content"> <a href="index.html" class="logo">
+                <div class="header-content main-header-content">
+                    <button class="nav-toggler">
+                        <div class="nav-toggler__text">Открыть</div>
+                        <div class="nav-toggler__lines">
+                            <div class="nav-toggler__line"></div>
+                            <div class="nav-toggler__line"></div>
+                            <div class="nav-toggler__line"></div>
+                        </div>
+                    </button> <a href="index.html" class="logo">
             <img src="images/Logo.svg" width="100%" alt="Логотип CreditBooster">
           </a>
 
-                    <nav class="header__nav"> <a href="index.html" class="logo for-devices mb-60">
-              <img src="images/Logo.svg" width="100%" alt="Логотип CreditBooster">
-            </a>
-
-                        <ul class="d-flex align-items-center justify-content-between">
-                            <li> <a href="#">
-                  Как получить займ
-                </a>
-
-                            </li>
-                            <li> <a href="#">
-                  О компании
-                </a>
-
-                            </li>
-                            <li> <a href="#">
-                  Условия займа
-                </a>
-
-                            </li>
-                            <li> <a href="#">
-                  Вопросы и ответы
-                </a>
-
-                            </li>
-                        </ul>
+                    <div class="header__buttons for-desktop">
+                        <button class="btn btn-rounded mr-20 mr-md-0">Внести платеж</button>
+                        <button class="btn btn-rounded btn-transparent login-btn">Войти
+                            <svg class="ml-10" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 15L15 12M15 12L12 9M15 12H4M4 7.24802V7.2002C4 6.08009 4 5.51962 4.21799 5.0918C4.40973 4.71547 4.71547 4.40973 5.0918 4.21799C5.51962 4 6.08009 4 7.2002 4H16.8002C17.9203 4 18.4796 4 18.9074 4.21799C19.2837 4.40973 19.5905 4.71547 19.7822 5.0918C20 5.5192 20 6.07899 20 7.19691V16.8036C20 17.9215 20 18.4805 19.7822 18.9079C19.5905 19.2842 19.2837 19.5905 18.9074 19.7822C18.48 20 17.921 20 16.8031 20H7.19691C6.07899 20 5.5192 20 5.0918 19.7822C4.71547 19.5905 4.40973 19.2839 4.21799 18.9076C4 18.4798 4 17.9201 4 16.8V16.75"
+                                stroke="#CD2759" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="header-nav">
+                <div class="container">
+                    <div class="row for-devices">
                         <div class="header__buttons">
-                            <div class="header__contacts mr-20">
-                                <div> <a href="tel:+79123456789">+7 (912) 345-67-89</a>
-
-                                </div>
-                                <div> <a href="mailto:info@creditboost.com">info@creditboost.com</a>
-
-                                </div>
-                            </div>
                             <button class="btn btn-rounded mr-20 mr-md-0">Внести платеж</button>
                             <button class="btn btn-rounded btn-transparent login-btn">Войти
                                 <svg class="ml-10" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -78,23 +68,47 @@
                                 </svg>
                             </button>
                         </div>
-                    </nav>
-                    <div class="mob-btns d-flex align-items-center gap-30">
-                        <button class="mob-login-btn">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 15L15 12M15 12L12 9M15 12H4M4 7.24802V7.2002C4 6.08009 4 5.51962 4.21799 5.0918C4.40973 4.71547 4.71547 4.40973 5.0918 4.21799C5.51962 4 6.08009 4 7.2002 4H16.8002C17.9203 4 18.4796 4 18.9074 4.21799C19.2837 4.40973 19.5905 4.71547 19.7822 5.0918C20 5.5192 20 6.07899 20 7.19691V16.8036C20 17.9215 20 18.4805 19.7822 18.9079C19.5905 19.2842 19.2837 19.5905 18.9074 19.7822C18.48 20 17.921 20 16.8031 20H7.19691C6.07899 20 5.5192 20 5.0918 19.7822C4.71547 19.5905 4.40973 19.2839 4.21799 18.9076C4 18.4798 4 17.9201 4 16.8V16.75"
-                                stroke="#CD2759" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                />
-                            </svg>
-                        </button>
-                        <div class="mob-nav-toggler for-devices">
-                            <div class="mob-nav-toggler__line"></div>
-                            <div class="mob-nav-toggler__line"></div>
-                            <div class="mob-nav-toggler__line"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <nav>
+                                <ul>
+                                    <li><a href="#learn">Как получить займ</a>
+
+                                    </li>
+                                    <li><a href="#about">О компании</a>
+
+                                    </li>
+                                    <li><a onclick="openModal('conditions-modal')">Условия займа</a>
+
+                                    </li>
+                                    <li><a href="#faq">Вопросы и ответы</a>
+
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="header-contacts">
+                                <div class="header-contacts__img">
+                                    <img src="images/header-contacts.png" alt="наши контакты">
+                                </div>
+                                <div class="header-contacts__content">
+                                    <div class="header-contacts__links"> <a href="tel:+79123456789" class="header-contacts__link">+7 (912) 345-67-89</a>
+
+                                        <a
+                                        href="mailto:info@sverhkassa.ru" class="header-contacts__link">info@sverhkassa.ru</a>
+                                    </div>
+                                    <div class="header-contacts__title">Нужно подать обращение?
+                                        <br>Сделайте это здесь.</div> <a href="account-appeal.html" class="header-contacts__btn">Подать обращение</a>
+
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="overlay"></div>
         </header>
         <div class="wrapper">
             <div class="container pt-80 pb-80">
@@ -104,22 +118,15 @@
 
                     <li class="mb-20"><a href="index.html" class="text-ruby underlined ">Главная страница</a>
                     </li>
+                    <li class="mb-20"><a href="appeal.html" class="text-ruby underlined ">Подать обращение</a>
+                    </li>
+                    <li class="mb-20"><a href="appeal-form.html" class="text-ruby underlined ">Форма обращения</a>
+                    </li>
+                    <li class="mb-20"><a href="appeal-feedback.html" class="text-ruby underlined ">Обратная связь по обращению</a>
+                    </li>
+                    <li class="mb-20"><a href="appeal-email.html" class="text-ruby underlined ">Обратная связь по почте</a>
+                    </li>
                     <br>
-                    <!-- <h4 class="mb-20">Регистрация/ввод данных</h4>
-      <li class="mb-20"><a href="contact-info-1.html" class="text-green text-600 underlined ">Регистрация – Шаг 1</a></li>
-      <li class="mb-20"><a href="contact-info-2.html" class="text-green text-600 underlined ">Регистрация – Шаг 2</a></li>
-      <li class="mb-20"><a href="contact-info-3.html" class="text-green text-600 underlined ">Регистрация – Шаг 3</a></li>
-      <li class="mb-20"><a href="contact-info-4.html" class="text-green text-600 underlined ">Регистрация – Шаг 4</a></li>
-      <li class="mb-20"><a href="contact-info-4-checking.html" class="text-green text-600 underlined ">Регистрация – Шаг 4 - Проверка одобрения</a></li>
-      <li class="mb-20"><a href="popup.html" class="text-green text-600 underlined ">Контактная информация – Popup</a></li>
-      <li class="mb-20"><a href="verification.html" class="text-green text-600 underlined ">Контактная информация – Верификация </a></li>
-      <li class="mb-20"><a href="approval.html" class="text-green text-600 underlined ">Одобрение</a></li>
-      <li class="mb-20"><a href="approval-statement.html" class="text-green text-600 underlined ">Одобрение - к оформлению заявления</a></li>
-      <li class="mb-20"><a href="approval-confirm-tel.html" class="text-green text-600 underlined ">Одобрение - подтверждение номера</a></li>
-      <li class="mb-20"><a href="approval-confirmed.html" class="text-green text-600 underlined ">Одобрение - номер подтвержден</a></li>
-      <li class="mb-20"><a href="rate.html" class="text-green text-600 underlined ">Оценка сервиса</a></li>
-      <li class="mb-20"><a href="authentification.html" class="text-green text-600 underlined ">Аутентификация</a></li>
-      <li class="mb-20"><a href="pdf-popup.html" class="text-green text-600 underlined ">Акция Поймай удачу (PDF в модальном окне)</a></li> -->
                     <br>
                      <h4 class="mb-20">Личный кабинет</h4>
 
@@ -168,6 +175,12 @@
                     <li class="mb-20"><a href="account-approved.html" class="text-ruby underlined ">Заявка - одобрение</a>
                     </li>
                     <li class="mb-20"><a href="account-transfer.html" class="text-ruby underlined ">Заявка - Перевод денег</a>
+                    </li>
+                    <li class="mb-20"><a href="account-settings.html" class="text-ruby underlined ">Настройки аккаунта</a>
+                    </li>
+                    <li class="mb-20"><a href="account-my-appeals.html" class="text-ruby underlined ">Мои обращения</a>
+                    </li>
+                    <li class="mb-20"><a href="account-appeal.html" class="text-ruby underlined ">Создать обращение</a>
                     </li>
                     <br>
                     <br>
