@@ -34,15 +34,26 @@
             <img src="images/Logo.svg" width="100%" alt="Логотип CreditBooster">
           </a>
 
-                    <button class="btn btn-rounded btn-transparent logout-btn"> <span class="mr-10">Выйти</span>
+                    <div class="d-flex gap-20 header-buttons">
+                        <button class="btn btn-transparent logout-btn"> <span class="mr-10">Подать обращение</span>
 
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                        width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M17 15L20 12M20 12L17 9M20 12H9M20 7.24802V7.2002C20 6.08009 20 5.51962 19.782 5.0918C19.5903 4.71547 19.2845 4.40973 18.9082 4.21799C18.4804 4 17.9199 4 16.7998 4H7.1998C6.0797 4 5.52043 4 5.09261 4.21799C4.71628 4.40973 4.40952 4.71547 4.21777 5.0918C4 5.5192 4 6.07899 4 7.19691V16.8036C4 17.9215 4 18.4805 4.21777 18.9079C4.40952 19.2842 4.71628 19.5905 5.09261 19.7822C5.52001 20 6.079 20 7.19691 20H16.8031C17.921 20 18.4808 20 18.9082 19.7822C19.2845 19.5905 19.5903 19.2839 19.782 18.9076C20 18.4798 20 17.9201 20 16.8V16.75"
-                            stroke="#CD2759" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            />
-                        </svg>
-                    </button>
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                            width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M20.7767 10C20.9226 10.6432 20.9997 11.3126 20.9997 12C20.9997 16.9706 16.9703 21 11.9997 21C11.3067 21 10.6319 20.9217 9.98388 20.7734C9.35789 20.6301 8.70569 20.6103 8.08078 20.7581C6.68524 21.0884 4.75904 21.3545 3.44121 20.9801C2.8859 20.8224 2.83154 20.1354 3.09916 19.6239C3.41048 19.0289 3.68129 18.2964 3.88597 17.6456C4.1152 16.9167 3.96977 16.1402 3.67805 15.434C3.2409 14.3758 2.99971 13.2161 2.99971 12C2.99971 7.02944 7.02915 3 11.9997 3C12.8672 3 13.706 3.12273 14.4997 3.35177M7.99971 10.5H15.9997M7.99971 14.5H11.9997M19.9997 2V4M19.9997 4V6M19.9997 4H17.9997M19.9997 4H21.9997"
+                                stroke="#CD2759" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                />
+                            </svg>
+                        </button>
+                        <button class="btn btn-transparent logout-btn"> <span class="mr-10">Выйти</span>
+
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                            width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M17 15L20 12M20 12L17 9M20 12H9M20 7.24802V7.2002C20 6.08009 20 5.51962 19.782 5.0918C19.5903 4.71547 19.2845 4.40973 18.9082 4.21799C18.4804 4 17.9199 4 16.7998 4H7.1998C6.0797 4 5.52043 4 5.09261 4.21799C4.71628 4.40973 4.40952 4.71547 4.21777 5.0918C4 5.5192 4 6.07899 4 7.19691V16.8036C4 17.9215 4 18.4805 4.21777 18.9079C4.40952 19.2842 4.71628 19.5905 5.09261 19.7822C5.52001 20 6.079 20 7.19691 20H16.8031C17.921 20 18.4808 20 18.9082 19.7822C19.2845 19.5905 19.5903 19.2839 19.782 18.9076C20 18.4798 20 17.9201 20 16.8V16.75"
+                                stroke="#CD2759" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
         </header>
@@ -51,38 +62,85 @@
                 <div class="account-content mb-60">
                      <h1 class="mb-40 mb-md-20">Изменение паспортных данных</h1>
 
-                    <form action="" class="update-photos-form">
-                        <p class="text-center text-20 mb-40">Некоторые файлы не прошли проверку. Пожалуйста, загрузите их еще раз.
-                            Сделайте фото согласно примеру. Убедитесь, что данные на фото легко считываются.</p>
-                        <div
-                        class="update-photos mb-40">
-                            <div class="update-photos__item">
-                                <div class="update-photos__top">
-                                    <div class="update-photos__image">
-                                        <img src="images/passport-selfie.png" alt="">
+                    <div class="flow-wrapper">
+                        <form action="" class="update-photos-form">
+                            <p class="text-center text-20 mb-40">Некоторые файлы не прошли проверку. Пожалуйста, загрузите их еще раз.
+                                Сделайте фото согласно примеру. Убедитесь, что данные на фото легко считываются.</p>
+                            <div
+                            class="flow-photos mb-40 flex-wrap ">
+                                <div class="flow-photos__item">
+                                    <div class="flow-photos__pic uploaded-pic">
+                                        <img src="images/passport-selfie.png" alt="селфи с паспортом">
                                     </div>
-                                    <div class="update-photos__description">Селфи с паспортом</div>
-                                </div>
-                                <label class="btn btn-rounded btn-black btn-transparent">
-                                    <input type="file" name="file"> <span class="file-name">Прикрепить файл</span>
+                                    <div class="flow-photos__right">
+                                        <div class="flow-photos__description">Селфи с паспортом</div>
+                                        <div class="edit-button"> <span>Переснять</span>
 
-                                </label>
-                            </div>
-                            <div class="update-photos__item">
-                                <div class="update-photos__top">
-                                    <div class="update-photos__image">
-                                        <img src="images/passport-photo.png" alt="">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                            height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M12.5 20.6946H18.5M6.50736 19.6946H5C4.44772 19.6946 4 19.2469 4 18.6946V17.1873C4 16.3916 4.31607 15.6285 4.87868 15.0659L14.75 5.19462C15.7855 4.15909 17.4645 4.15909 18.5 5.19462C19.5355 6.23015 19.5355 7.90909 18.5 8.94462L8.62868 18.8159C8.06607 19.3785 7.30301 19.6946 6.50736 19.6946Z"
+                                                stroke="#151515" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                />
+                                            </svg>
+                                        </div>
                                     </div>
-                                    <div class="update-photos__description">Разворот паспорта с вашей фотографией и ФИО</div>
                                 </div>
-                                <label class="btn btn-rounded btn-black btn-transparent">
-                                    <input type="file" name="file"> <span class="file-name">Прикрепить файл</span>
+                                <div class="flow-photos__item">
+                                    <div class="flow-photos__pic uploaded-pic">
+                                        <img src="images/passport-photo.png" alt="первый разворот паспорта">
+                                    </div>
+                                    <div class="flow-photos__right">
+                                        <div class="flow-photos__description">Первый разворот паспорта</div>
+                                        <div class="edit-button" onclick="openModal('upload-passport-1')"> <span>Переснять</span>
 
-                                </label>
-                            </div>
-                </div> <a href="account-updating.html" class="btn js-form-btn">Сохранить</a>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                            height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M12.5 20.6946H18.5M6.50736 19.6946H5C4.44772 19.6946 4 19.2469 4 18.6946V17.1873C4 16.3916 4.31607 15.6285 4.87868 15.0659L14.75 5.19462C15.7855 4.15909 17.4645 4.15909 18.5 5.19462C19.5355 6.23015 19.5355 7.90909 18.5 8.94462L8.62868 18.8159C8.06607 19.3785 7.30301 19.6946 6.50736 19.6946Z"
+                                                stroke="#151515" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flow-photos__item">
+                                    <div class="flow-photos__pic uploaded-pic">
+                                        <img src="images/passport-address.png" alt="фото прописки">
+                                    </div>
+                                    <div class="flow-photos__right">
+                                        <div class="flow-photos__description">Разворот с регистрацией</div>
+                                        <div class="edit-button" onclick="openModal('upload-passport-2')"> <span>Переснять</span>
 
-                </form>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                            height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M12.5 20.6946H18.5M6.50736 19.6946H5C4.44772 19.6946 4 19.2469 4 18.6946V17.1873C4 16.3916 4.31607 15.6285 4.87868 15.0659L14.75 5.19462C15.7855 4.15909 17.4645 4.15909 18.5 5.19462C19.5355 6.23015 19.5355 7.90909 18.5 8.94462L8.62868 18.8159C8.06607 19.3785 7.30301 19.6946 6.50736 19.6946Z"
+                                                stroke="#151515" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flow-photos__item">
+                                    <div class="flow-photos__pic uploaded-pic">
+                                        <img src="images/passport-address.png" alt="фото прописки">
+                                    </div>
+                                    <div class="flow-photos__right">
+                                        <div class="flow-photos__description">Разворот с регистрацией</div>
+                                        <div class="edit-button" onclick="openModal('upload-passport-1')"> <span>Переснять</span>
+
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                            height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M12.5 20.6946H18.5M6.50736 19.6946H5C4.44772 19.6946 4 19.2469 4 18.6946V17.1873C4 16.3916 4.31607 15.6285 4.87868 15.0659L14.75 5.19462C15.7855 4.15909 17.4645 4.15909 18.5 5.19462C19.5355 6.23015 19.5355 7.90909 18.5 8.94462L8.62868 18.8159C8.06607 19.3785 7.30301 19.6946 6.50736 19.6946Z"
+                                                stroke="#151515" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                    </div>
+                    <div class="btn mb-20" onclick="openModal('upload-selfie')">Заменить</div> <a href="account-updating.html" class="btn js-form-btn">Сохранить</a>
+
+                    </form>
+                </div>
             </div>
             <div class="notification error"> <span>Не все поля заполнены</span>
 
@@ -90,6 +148,156 @@
                 alt="ошибка">
             </div>
         </div>
+        </div>
+        <div class="modal uploads-modal" id="upload-selfie">
+            <div class="uploads-modal__controls mb-40">
+                <div class="uploads-steps">
+                    <div class="uploads-steps__item active">Шаг 1</div>
+                    <div class="uploads-steps__item">Шаг 2</div>
+                    <div class="uploads-steps__item">Шаг 3</div>
+                </div>
+                <div class="popup-close" onclick="closeModal()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25"
+                    fill="none">
+                        <path d="M18 18.5L12 12.5M12 12.5L6 6.5M12 12.5L18 6.5M12 12.5L6 18.5"
+                        stroke="#191919" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        />
+                    </svg>
+                </div>
+            </div>
+            <div class="popup-title">Селфи с паспортом</div>
+            <div class="uploads-popup">
+                <div class="flow-photos__pic mb-20">
+                    <img src="images/passport-selfie.png" alt="селфи с паспортом">
+                </div>
+                <p class="mb-40 mb-sm-0">Убедитесь, что данные паспорта и Ваше лицо будет хорошо видно</p>
+                <label
+                class="upload-photo">
+                    <input type="file" name="flow-photo">
+                    <div class="upload-icon mb-20">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"
+                        fill="none">
+                            <path d="M26 6.00174C25.809 6 25.5946 6 25.3494 6H16.4004C14.1602 6 13.0392 6 12.1836 6.43597C11.4309 6.81947 10.8195 7.43095 10.436 8.18359C10 9.03924 10 10.1602 10 12.4004V35.6004C10 37.8406 10 38.9601 10.436 39.8158C10.8195 40.5684 11.4309 41.181 12.1836 41.5645C13.0384 42 14.158 42 16.3939 42L31.6062 42C33.842 42 34.96 42 35.8148 41.5645C36.5674 41.181 37.181 40.5684 37.5645 39.8158C38 38.961 38 37.843 38 35.6072V18.6514C38 18.4059 37.9999 18.1912 37.9981 18M26 6.00174C26.5713 6.00694 26.9327 6.02769 27.2777 6.11052C27.6858 6.20851 28.0757 6.37053 28.4336 6.58984C28.8371 6.83713 29.1836 7.18364 29.875 7.875L36.126 14.126C36.8178 14.8178 37.1617 15.1627 37.4091 15.5664C37.6284 15.9243 37.7907 16.3145 37.8887 16.7227C37.9715 17.0675 37.9927 17.429 37.9981 18M26 6.00174V11.6C26 13.8402 26 14.9595 26.436 15.8152C26.8195 16.5678 27.4309 17.181 28.1836 17.5645C29.0384 18 30.158 18 32.3938 18H37.9981M37.9981 18H38.0004"
+                            stroke="#CD2759" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            />
+                        </svg>
+                    </div>
+                    <div class="mobile-upload-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none">
+                            <path d="M8 5.7777H5C3.34315 5.7777 2 7.12084 2 8.7777V16.9999C2 18.6568 3.34315 19.9999 5 19.9999H19C20.6569 19.9999 22 18.6568 22 16.9999V8.7777C22 7.12084 20.6569 5.7777 19 5.7777H16M8 5.7777L8.08797 4.65915C8.12212 4.22487 8.23322 3.78752 8.52463 3.46373C9.08674 2.83916 9.89408 2.4707 10.7545 2.4707H13.2455C14.1059 2.4707 14.9133 2.83916 15.4754 3.46373C15.7668 3.78752 15.8779 4.22487 15.912 4.65915L16 5.7777M8 5.7777H16M18.01 8.99992H18M15 12.9999C15 14.6568 13.6569 15.9999 12 15.9999C10.3431 15.9999 9 14.6568 9 12.9999C9 11.3431 10.3431 9.99992 12 9.99992C13.6569 9.99992 15 11.3431 15 12.9999Z"
+                            stroke="#151515" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                            />
+                        </svg>
+                    </div>
+                    <p class="upload-description mb-5">Нажмите или перетащите фото, чтобы загрузить.</p>
+                    <p class="upload-format text-grey">PNG, JPG (Размером до 25MB)</p>
+                    </label>
+                    <div class="upload-buttons">
+                        <div class="btn mb-20">Заменить</div>
+                        <div class="btn">Использовать</div>
+                    </div>
+            </div>
+        </div>
+        <div class="modal uploads-modal" id="upload-passport-1">
+            <div class="uploads-modal__controls mb-40">
+                <div class="uploads-steps">
+                    <div class="uploads-steps__item active">Шаг 1</div>
+                    <div class="uploads-steps__item active">Шаг 2</div>
+                    <div class="uploads-steps__item">Шаг 3</div>
+                </div>
+                <div class="popup-close" onclick="closeModal()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25"
+                    fill="none">
+                        <path d="M18 18.5L12 12.5M12 12.5L6 6.5M12 12.5L18 6.5M12 12.5L6 18.5"
+                        stroke="#191919" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        />
+                    </svg>
+                </div>
+            </div>
+            <div class="popup-title">Первый разворот паспорта</div>
+            <div class="uploads-popup">
+                <div class="flow-photos__pic mb-20">
+                    <img src="images/passport-photo.png" alt="Первый разворот паспорта">
+                </div>
+                <p class="mb-40 mb-sm-0">Убедитесь, что данные паспорта и Ваше лицо будет хорошо видно</p>
+                <label
+                class="upload-photo">
+                    <input type="file" name="flow-photo">
+                    <div class="upload-icon mb-20">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"
+                        fill="none">
+                            <path d="M26 6.00174C25.809 6 25.5946 6 25.3494 6H16.4004C14.1602 6 13.0392 6 12.1836 6.43597C11.4309 6.81947 10.8195 7.43095 10.436 8.18359C10 9.03924 10 10.1602 10 12.4004V35.6004C10 37.8406 10 38.9601 10.436 39.8158C10.8195 40.5684 11.4309 41.181 12.1836 41.5645C13.0384 42 14.158 42 16.3939 42L31.6062 42C33.842 42 34.96 42 35.8148 41.5645C36.5674 41.181 37.181 40.5684 37.5645 39.8158C38 38.961 38 37.843 38 35.6072V18.6514C38 18.4059 37.9999 18.1912 37.9981 18M26 6.00174C26.5713 6.00694 26.9327 6.02769 27.2777 6.11052C27.6858 6.20851 28.0757 6.37053 28.4336 6.58984C28.8371 6.83713 29.1836 7.18364 29.875 7.875L36.126 14.126C36.8178 14.8178 37.1617 15.1627 37.4091 15.5664C37.6284 15.9243 37.7907 16.3145 37.8887 16.7227C37.9715 17.0675 37.9927 17.429 37.9981 18M26 6.00174V11.6C26 13.8402 26 14.9595 26.436 15.8152C26.8195 16.5678 27.4309 17.181 28.1836 17.5645C29.0384 18 30.158 18 32.3938 18H37.9981M37.9981 18H38.0004"
+                            stroke="#CD2759" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            />
+                        </svg>
+                    </div>
+                    <div class="mobile-upload-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none">
+                            <path d="M8 5.7777H5C3.34315 5.7777 2 7.12084 2 8.7777V16.9999C2 18.6568 3.34315 19.9999 5 19.9999H19C20.6569 19.9999 22 18.6568 22 16.9999V8.7777C22 7.12084 20.6569 5.7777 19 5.7777H16M8 5.7777L8.08797 4.65915C8.12212 4.22487 8.23322 3.78752 8.52463 3.46373C9.08674 2.83916 9.89408 2.4707 10.7545 2.4707H13.2455C14.1059 2.4707 14.9133 2.83916 15.4754 3.46373C15.7668 3.78752 15.8779 4.22487 15.912 4.65915L16 5.7777M8 5.7777H16M18.01 8.99992H18M15 12.9999C15 14.6568 13.6569 15.9999 12 15.9999C10.3431 15.9999 9 14.6568 9 12.9999C9 11.3431 10.3431 9.99992 12 9.99992C13.6569 9.99992 15 11.3431 15 12.9999Z"
+                            stroke="#151515" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                            />
+                        </svg>
+                    </div>
+                    <p class="upload-description mb-5">Нажмите или перетащите фото, чтобы загрузить.</p>
+                    <p class="upload-format text-grey">PNG, JPG (Размером до 25MB)</p>
+                    </label>
+                    <div class="upload-buttons">
+                        <div class="btn mb-20">Заменить</div>
+                        <div class="btn">Использовать</div>
+                    </div>
+            </div>
+        </div>
+        <div class="modal uploads-modal" id="upload-passport-2">
+            <div class="uploads-modal__controls mb-40">
+                <div class="uploads-steps">
+                    <div class="uploads-steps__item active">Шаг 1</div>
+                    <div class="uploads-steps__item active">Шаг 2</div>
+                    <div class="uploads-steps__item active">Шаг 3</div>
+                </div>
+                <div class="popup-close" onclick="closeModal()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25"
+                    fill="none">
+                        <path d="M18 18.5L12 12.5M12 12.5L6 6.5M12 12.5L18 6.5M12 12.5L6 18.5"
+                        stroke="#191919" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        />
+                    </svg>
+                </div>
+            </div>
+            <div class="popup-title">Разворот с регистрацией</div>
+            <div class="uploads-popup">
+                <div class="flow-photos__pic mb-20">
+                    <img src="images/passport-address.png" alt="Разворот с регистрацией">
+                </div>
+                <p class="mb-40 mb-sm-0">Убедитесь, что данные паспорта и Ваше лицо будет хорошо видно</p>
+                <label
+                class="upload-photo">
+                    <input type="file" name="flow-photo">
+                    <div class="upload-icon mb-20">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"
+                        fill="none">
+                            <path d="M26 6.00174C25.809 6 25.5946 6 25.3494 6H16.4004C14.1602 6 13.0392 6 12.1836 6.43597C11.4309 6.81947 10.8195 7.43095 10.436 8.18359C10 9.03924 10 10.1602 10 12.4004V35.6004C10 37.8406 10 38.9601 10.436 39.8158C10.8195 40.5684 11.4309 41.181 12.1836 41.5645C13.0384 42 14.158 42 16.3939 42L31.6062 42C33.842 42 34.96 42 35.8148 41.5645C36.5674 41.181 37.181 40.5684 37.5645 39.8158C38 38.961 38 37.843 38 35.6072V18.6514C38 18.4059 37.9999 18.1912 37.9981 18M26 6.00174C26.5713 6.00694 26.9327 6.02769 27.2777 6.11052C27.6858 6.20851 28.0757 6.37053 28.4336 6.58984C28.8371 6.83713 29.1836 7.18364 29.875 7.875L36.126 14.126C36.8178 14.8178 37.1617 15.1627 37.4091 15.5664C37.6284 15.9243 37.7907 16.3145 37.8887 16.7227C37.9715 17.0675 37.9927 17.429 37.9981 18M26 6.00174V11.6C26 13.8402 26 14.9595 26.436 15.8152C26.8195 16.5678 27.4309 17.181 28.1836 17.5645C29.0384 18 30.158 18 32.3938 18H37.9981M37.9981 18H38.0004"
+                            stroke="#CD2759" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            />
+                        </svg>
+                    </div>
+                    <div class="mobile-upload-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none">
+                            <path d="M8 5.7777H5C3.34315 5.7777 2 7.12084 2 8.7777V16.9999C2 18.6568 3.34315 19.9999 5 19.9999H19C20.6569 19.9999 22 18.6568 22 16.9999V8.7777C22 7.12084 20.6569 5.7777 19 5.7777H16M8 5.7777L8.08797 4.65915C8.12212 4.22487 8.23322 3.78752 8.52463 3.46373C9.08674 2.83916 9.89408 2.4707 10.7545 2.4707H13.2455C14.1059 2.4707 14.9133 2.83916 15.4754 3.46373C15.7668 3.78752 15.8779 4.22487 15.912 4.65915L16 5.7777M8 5.7777H16M18.01 8.99992H18M15 12.9999C15 14.6568 13.6569 15.9999 12 15.9999C10.3431 15.9999 9 14.6568 9 12.9999C9 11.3431 10.3431 9.99992 12 9.99992C13.6569 9.99992 15 11.3431 15 12.9999Z"
+                            stroke="#151515" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                            />
+                        </svg>
+                    </div>
+                    <p class="upload-description mb-5">Нажмите или перетащите фото, чтобы загрузить.</p>
+                    <p class="upload-format text-grey">PNG, JPG (Размером до 25MB)</p>
+                    </label>
+                    <div class="upload-buttons">
+                        <div class="btn mb-20">Заменить</div>
+                        <div class="btn">Использовать</div>
+                    </div>
+            </div>
         </div>
         <footer></footer>
         <script src="./js/swiper-bundle.min.js"></script>
